@@ -1,5 +1,6 @@
 # アプリケーション名
 ![IKロゴ](https://user-images.githubusercontent.com/71745650/98325424-1eac6400-2032-11eb-899c-735967326da2.jpg)
+<img src="https://user-images.githubusercontent.com/71745650/98325424-1eac6400-2032-11eb-899c-735967326da2.jpg" width=50%>
 
 IKーkintai  
 # アプリケーション概要
