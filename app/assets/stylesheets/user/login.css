@@ -1,0 +1,30 @@
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-blue-btn {
+  width: 100%;
+  background: #3571e0;
+  border: 1px solid #3571e0;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
+
+.indispensable {
+  background: #3571e0;
+  margin-left: 7px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+}

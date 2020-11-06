@@ -36,27 +36,27 @@ IKという会社の勤怠管理システムをアプリケーション化させ
 
 ## users テーブル
 
-| Column      | Type    | Options     |
-| ----------- | ------- | ----------- |
-| full_part   | boolean | null: false |
-| full_name   | string  | null: false |
-| affiliation | integer | null: false |
-| email       | string  | null: false |
-| password    | string  | null: false |
+| Column         | Type    | Options     |
+| -------------- | ------- | ----------- |
+| full_part      | boolean | null: false |
+| full_name      | string  | null: false |
+| affiliation_id | integer | null: false |
+| email          | string  | null: false |
+| password       | string  | null: false |
 
 ### Association
 - has_one :attendance
 
 ## attendances テーブル
 
-| Column     | Type       | Options                        |
-| ---------- | ---------- | ------------------------------ |
-| work_place | integer    | null: false                    |
-| work_days  | date       | null: false                    |
-| in_out     | boolean    | null: false                    |
-| time       | time       | null: false                    |
-| carfare    | integer    |                                |
-| user       | references | null: false, foreign_key: true |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| work_place_id | integer    | null: false                    |
+| work_days     | date       | null: false                    |
+| in_out        | boolean    | null: false                    |
+| time          | time       | null: false                    |
+| carfare       | integer    |                                |
+| user          | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
