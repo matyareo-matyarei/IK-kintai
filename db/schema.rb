@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_11_06_052701) do
     t.string "encrypted_password", default: "", null: false
     t.boolean "full_part", null: false
     t.string "full_name", null: false
-    t.integer "affiliation", null: false
+    t.integer "affiliation_id", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
