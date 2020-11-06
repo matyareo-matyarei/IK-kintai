@@ -9,10 +9,11 @@ IKという会社の勤怠管理システムをアプリケーション化させ
 # 利用方法
 
 # 目指した課題解決
-１つフォームで勤怠管理の入力を済ませられる
+アプリで勤怠管理の入力をすべて済ませられる
 
 # 洗い出した要件
-- 
+- 打刻漏れがあった際
+- 休憩時間、手当て、施術時間
 - 
 
 # 実装した機能についてのGIFと説明
@@ -49,8 +50,8 @@ IKという会社の勤怠管理システムをアプリケーション化させ
 | ---------- | ---------- | ------------------------------ |
 | work_place | integer    | null: false                    |
 | work_days  | date       | null: false                    |
-| in_out     | boolean    | null: false                    |
-| time       | time       | null: false                    |
+| in_time    | time       | null: false                    |
+| out_time   | time       | null: false                    |
 | carfare    | integer    |                                |
 | user       | references | null: false, foreign_key: true |
 
