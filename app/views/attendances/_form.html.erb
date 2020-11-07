@@ -1,4 +1,4 @@
-    <%# <%= render 'shared/error_messages', model: f.object %> %>
+    <%= render 'shared/error_messages', model: f.object %>
 
     <div class="img-upload">
     </div>
@@ -35,16 +35,16 @@
       </div>
         <%= f.time_field :work_time, {class:"items-text", id:"attendance-work-time"} %>
 
-    <div class="sell-price">
+    <div class="sell-carfare">
       <div class="weight-bold-text question-text">
         <span>交通費（あればご記入下さい）<br></span>
       </div>
       <div>
-        <div class="price-content">
+        <div class="carfare-content">
           <span class="sell-yen">¥</span>
-          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+          <%= f.text_field :carfare, class:"carfare-input", id:"item-carfare", placeholder:"例）300" %>
         </div>
-        <div class="price-content">
+        <div class="carfare-content">
           <span>1日にかかった総額をご記入ください</span>
           <span>
             <span id='profit'></span>

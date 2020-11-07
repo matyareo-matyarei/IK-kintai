@@ -5,12 +5,12 @@ session = GoogleDrive::Session.from_config("config.json")
 # 書き込みたいスプレッドシートを、千束の勤怠に指定する
 spreads = session.spreadsheet_by_key("17uvb27n9d-pobk0kVQy-YwJbXhxpEaOt2RBP0vB2j4M")
 
-# "水野雅之"というワークシートを取得
+# "水野雅之"Userのfull_nameと一致するワークシートを取得
 worksheet_tittle = "水野雅之"
 worksheet = spreads.worksheet_by_title(worksheet_tittle)
 
-time = Time.now
-p "#{time.hour} : #{time.min}"
+# time = Time.now
+# p "#{time.hour} : #{time.min}"
 
 # スプレッドシートへの書き込み
 worksheet[6,3] = "10:00"
@@ -45,7 +45,7 @@ end
 
 # シートの保存
 worksheet.save
-puts Time.parse(worksheet[6,1])
+# puts Time.parse(worksheet[6,1])
 # C3セルの情報を取得
 # シート側で数値が書き込まれていても文字列が返ってくるので要注意
 # [行番号, 列番号]の指定方法と、「C3」のようにセルを直接指定する方法がある

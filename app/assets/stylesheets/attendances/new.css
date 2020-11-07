@@ -118,14 +118,14 @@
 }
 
 
-/* 販売価格 */
-.sell-price {
+/* 交通費 */
+.sell-carfare {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.price-content {
+.carfare-content {
   width: 300px;
   border-bottom: 1px solid #ccc;
   padding: 10px;
@@ -134,22 +134,18 @@
   justify-content: space-between;
 }
 
-.price-text {
+.carfare-text {
   display: flex;
   align-items: center;
 }
 
-.sell-yen {
-  font-size: 18px;
-}
-
-.price-input {
+.carfare-input {
   height: 30px;
   text-align: right;
   padding-right: 10px;
 }
 
-/* /販売価格 */
+/* /交通費 */
 
 /* 注意書き */
 .caution {

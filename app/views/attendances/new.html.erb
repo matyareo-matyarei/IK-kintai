@@ -5,7 +5,7 @@
     <h2 class="items-sell-title"><%= "#{current_user.full_name}さんの勤怠情報を入力" %></h2>
   </header>
   <div class="items-sell-main">
-    <%= form_with model: @attendance, local: true do |f| %>
+    <%= form_with model: @attendace, local: true do |f| %>
       <%= render partial: "form", locals: { f: f } %>
   </div>
 

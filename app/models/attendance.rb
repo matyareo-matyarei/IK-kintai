@@ -5,7 +5,7 @@ class Attendance < ApplicationRecord
   end
   
   validates :in_out, inclusion: { in: [true, false]}
-  validates :carfare, numericality: { message: 'は半角数字で入力してください' }
+  validates :carfare, numericality: { only_integer: true, message: 'は半角数字で入力してください' }, allow_blank: true
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :work_place
