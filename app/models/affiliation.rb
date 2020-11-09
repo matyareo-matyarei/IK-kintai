@@ -3,6 +3,7 @@ class Affiliation < ActiveHash::Base
     { id: 1, name: '--' },
     { id: 2, name: '浅草' },
     { id: 3, name: '千束' },
-    { id: 4, name: '日暮里' }
+    { id: 4, name: '日暮里' },
+    { id: 5, name: '本部' }
   ]
 end
