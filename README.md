@@ -46,7 +46,7 @@ https://ik-kintai.herokuapp.com/
 | password       | string  | null: false |
 
 ### Association
-- has_one :attendance
+- has_many :attendances
 
 ## attendances テーブル
 

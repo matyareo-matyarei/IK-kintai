@@ -13,6 +13,6 @@ class User < ApplicationRecord
   validates :affiliation, presence: true
   validates :affiliation_id, numericality: { other_than: 1, message: 'を選んでください' }
 
-  has_one :attendance
+  has_many :attendances
   
 end

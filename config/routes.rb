@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :attendances, only: [:new, :create]
   post "/" => "attendances#create"
   get "/attendances" => "attendances#new"
+  resources :users, only: [:show, :edit, :update]
 
 end

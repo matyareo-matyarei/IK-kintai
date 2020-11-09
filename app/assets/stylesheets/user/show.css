@@ -1,0 +1,27 @@
+.contents.row {
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 500px;
+}
+
+.attendances{
+  height: 30%;
+  flex-direction: column;
+
+}
+
+.content_post{
+  color: cornflowerblue;
+  font-size: 13px;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+
+.attendances-info {
+  color: grey;
+  margin-left: 7pt;
+}
