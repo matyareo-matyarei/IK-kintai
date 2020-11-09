@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <h2 class="items-sell-title"><%= "#{current_user.full_name}さんの勤怠情報を入力" %></h2>
+  </header>
+  <div class="items-sell-main">
+    <%= form_with model: @attendance, local: true do |f| %>
+      <%= render partial: "form", locals: { f: f } %>
+    </div>
+
+    <div class='purchase-btn'>
+      <span class='purchase-btn-text'>現時刻入力</span>
+        <%= link_to image_tag('時計.png' , size: '185x50', class: "purchase-btn-icon"), "#"  %>
+    </div>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "入力する" ,class:"sell-btn" %>
+    </div>
+  </div>
+  <% end %>
+  <%= render "shared/footer"%>
+</div>

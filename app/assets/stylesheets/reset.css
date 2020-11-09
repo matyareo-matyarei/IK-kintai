@@ -54,6 +54,7 @@ table {
 fieldset,
 img {
   border:0;
+  border-radius: 0.4em;
 }
 /*
   TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...

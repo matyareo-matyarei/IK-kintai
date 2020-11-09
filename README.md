@@ -54,7 +54,7 @@ IKという会社の勤怠管理システムをアプリケーション化させ
 | work_place_id | integer    | null: false                    |
 | work_days     | date       | null: false                    |
 | in_out        | boolean    | null: false                    |
-| time          | time       | null: false                    |
+| work_time     | time       | null: false                    |
 | carfare       | integer    |                                |
 | user          | references | null: false, foreign_key: true |
 

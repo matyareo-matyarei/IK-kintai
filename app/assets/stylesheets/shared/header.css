@@ -15,10 +15,6 @@
   align-items: center;
 }
 
-.furima-icon {
-  width: 10vw;
-  margin-right: 10vw;
-}
 
 .search-form {
   width: 65vw;
@@ -33,22 +29,10 @@
   padding-left: 10px;
 }
 
-.search-button {
-  width: 5vh;
-  border: 0;
-  cursor: pointer;
-  background-color: #3ccace;
-  padding: 8px;
-}
-
-.search-icon {
-  width: 100%;
-}
-
 .nav {
   font-size: 18px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
   width: 100%;
   padding: 1vh 0;
@@ -95,10 +79,12 @@
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: #333333;
+  color: #0099e8;
+  font-size: 20px;
 }
 
 .sign-up {
   text-decoration: none;
-  color: #333333;
+  color: #0099e8;
+  font-size: 20px;
 }

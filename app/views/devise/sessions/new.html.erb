@@ -4,8 +4,10 @@
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
-      社員情報入力
+      ログイン情報入力<br>
     </h1>
+      <%= link_to '新規登録へ', new_user_registration_path, class: "sign-up" %>
+
   </div>
   <div class='login-flash-message'>
     <%= flash[:notice] %>
@@ -31,4 +33,4 @@
 </div>
 <% end %>
 
-<%= render "shared/second-footer"%>
+<%= render "shared/footer"%>

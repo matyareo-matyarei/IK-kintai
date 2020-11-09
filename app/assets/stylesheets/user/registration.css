@@ -74,12 +74,6 @@
   font-size: 15px;
 }
 
-.input-name-wrap {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .input-name {
   width: 130px;
   margin: 5px 20px 0 20px;
@@ -138,8 +132,8 @@
 
 .register-blue-btn {
   width: 100%;
-  background: #3571e0;
-  border: 1px solid #3571e0;
+  background: #0099e8;
+  border: 1px solid #0099e8;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
@@ -154,7 +148,7 @@
 }
 
 .indispensable {
-  background: #3571e0;
+  background: #0099e8;
   margin-left: 7px;
   padding: 3px;
   border-radius: 2px;
