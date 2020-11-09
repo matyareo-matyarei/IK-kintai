@@ -25,3 +25,8 @@
   color: grey;
   margin-left: 7pt;
 }
+
+.userinfo {
+  border: 0.3px cornflowerblue solid ;
+  padding: 1px 15px;
+}
