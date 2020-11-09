@@ -5,9 +5,9 @@ IKーkintai
 # アプリケーション概要
 IKという会社の勤怠管理システムをアプリケーション化させたもの
 # URL
-
+https://ik-kintai.herokuapp.com/
 # テスト用アカウント
-
+指名：水野雅之　Email：a@a パスワード：aaaaaa
 # 利用方法
 
 # 目指した課題解決
