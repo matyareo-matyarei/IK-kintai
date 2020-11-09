@@ -1,49 +1,61 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<% resource_name.to_s.humanize %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
 <%# アカウント編集時に名前を入力できるようにフォームを追加 %>
-  <div class="field">
-    <%= f.label :full_name %><br />
-    <%= f.text_field :full_name, autofocus: true %>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">フルネーム</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :full_name, class:"input-default", id:"full_name", placeholder:"例) 榊康充", autofocus: true, maxlength:"10" %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">勤務形態(常勤／非常勤)</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.radio_button :full_part, :true, {style: "display: inline-block;"} %>
+      <%= f.label :full_part_true, "常勤" %>
+      <%= f.radio_button :full_part, :false, {style: "display: inline-block;"} %>
+      <%= f.label :full_part_false, "非常勤" %>      
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">所属院</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.collection_select(:affiliation_id, Affiliation.all, :id, :name, {}, {class:"input-default",id:"user_affiliation_id"}) %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  <div class="form-group">
+    <p class='info-text'>※ 社員情報は正しく入力してください。<br>勤怠入力に支障が出る場合があります。</p>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
+  <div class='register-btn'>
+    <%= f.submit "更新" ,class:"register-blue-btn" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+  <div class="form-group">
+    <h3>アカウントを取り消す</h3>
+    <%= button_to "アカウントの取消", registration_path(resource_name), data: { confirm: "登録したアカウントを取り消しますか？" }, method: :delete %>
+    <%= link_to "戻る", :back %>
+  </div>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<%= render "shared/footer"%>
 
-<%= link_to "Back", :back %>
