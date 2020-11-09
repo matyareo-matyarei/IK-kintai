@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        full_name: フルネーム
+        full_part: 常勤/非常勤
+        affiliation_id: 所属
+      attendance:
