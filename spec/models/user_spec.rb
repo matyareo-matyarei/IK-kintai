@@ -78,6 +78,12 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("所属を選んでください")
       end
+      it "affiliation_id]が1では登録できない" do
+        @user.affiliation_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("所属を選んでください")
+      end
+
     end
   end
 end

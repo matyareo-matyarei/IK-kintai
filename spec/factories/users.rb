@@ -4,7 +4,7 @@ FactoryBot.define do
     email                 {Faker::Internet.free_email}
     password              {Faker::Internet.password(min_length: 6)}
     password_confirmation {password}
-    full_part             {true}
-    affiliation_id        {Faker::Number.between(from: 2, to: 5)}
+    full_part             {Faker::Boolean.boolean}
+    affiliation_id        {Faker::Number.within(range: 2..5)}
   end
 end

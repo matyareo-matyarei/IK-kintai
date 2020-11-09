@@ -4,7 +4,7 @@ class Attendance < ApplicationRecord
     validates :work_time
   end
   
-  validates :in_out, inclusion: { in: [true, false]}
+  validates :in_out, inclusion: { in: [true, false], message: 'を選んでください' }
   validates :carfare, numericality: { only_integer: true, message: 'は半角数字で入力してください' }, allow_blank: true
   
   extend ActiveHash::Associations::ActiveRecordExtensions

@@ -6,3 +6,9 @@ ja:
         full_part: 常勤/非常勤
         affiliation_id: 所属
       attendance:
+        work_place: 勤務場所
+        work_place_id: 勤務場所
+        work_days: 勤務日
+        in_out: 出勤／退勤
+        work_time: 時刻
+        carfare: 交通費
