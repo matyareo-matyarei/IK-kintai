@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(current_user.id)
+    @user = current_user
     @attendances = current_user.attendances.order(id: "DESC")
 
   end
