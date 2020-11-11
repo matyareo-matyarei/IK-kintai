@@ -11,7 +11,6 @@ class AttendancesController < ApplicationController
       $user = User.find(current_user.id)
       $attendance = @attendance
       load "spreadsheet/drive.rb"
-
     else
       render :new
     end
