@@ -1,10 +1,8 @@
 .contents.row {
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    min-width: 500px;
+    margin: 0 5px 90px;
+    
 }
 
 .attendances{
