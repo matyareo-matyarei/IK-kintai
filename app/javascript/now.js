@@ -1,4 +1,4 @@
-function now() {
+const now = () => {
   const button = document.querySelector("button"); //nowボタン情報(DOM)をbuttonにいれる
   button.addEventListener("click", (e) => { //nowボタンがクリックされたら
     const workDay = document.getElementById("attendance-work-days");
@@ -14,6 +14,6 @@ function now() {
     workTime.value = timeDate;
     }
   );
-}
+};
 
-window.addEventListener("load", now);
+window.addEventListener("turbolinks:load", now);

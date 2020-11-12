@@ -33,7 +33,7 @@
   transition: .3s;
 }
 
-.purchase-btn button:hover{
+.purchase-btn button:hover {
   opacity: 0.2;
   background-color: white;
   border: white;
