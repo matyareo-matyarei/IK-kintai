@@ -43,8 +43,8 @@
     </div>
   </div>
 
-  <p>出退勤入力履歴(最新10件)</p>
   <div class="attendances">
+  <p class="rireki">出退勤入力履歴(最新10件)</p>
     <% @attendances.first(10).each do |attendance| %>
       <div class="content_post" >
         <%= WorkPlace.find(attendance.work_place_id).name %>

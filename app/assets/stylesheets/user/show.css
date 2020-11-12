@@ -1,8 +1,7 @@
 .contents.row {
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
     flex-direction: column;
-    margin: 0 5px 90px;
-    
+    margin: 0 5px 0px;
 }
 
 .attendances{
@@ -14,7 +13,6 @@
 .content_post{
   color: cornflowerblue;
   font-size: 13px;
-  width: 50vw;
   display: flex;
   justify-content: center;
 }
@@ -27,4 +25,8 @@
 .userinfo {
   border: 0.3px cornflowerblue solid ;
   padding: 1px 15px;
+}
+
+.rireki {
+  margin-left: 38%;
 }
