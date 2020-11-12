@@ -18,6 +18,14 @@
     <div class="form-btn-contents">
       <%= f.submit "入力する" ,class:"form-btn" %>
     </div>
+    <div class="items-form-title">
+      <h4>補足情報入力</h4>
+      <%= link_to image_tag('dentaku.png' , size: '60x60', class: "getumatu-btn-icon"), assist_attendances_path %>
+      <div class='info-text'>※休憩時間、手当て、施術時間を<br>
+      自動入力します。(日報参照)
+      </div>
+    </div>
+
   </div>
   <% end %>
   <%= render "shared/footer"%>

@@ -2,14 +2,13 @@
 
 <div class="contents row">
   <div class="success">
-    <h3>入力が完了しました。</h3><br>
+    <h3>入力処理が完了しました。</h3><br>
     <a class="btn" href="/">勤怠入力へ戻る</a>
   </div>
   <div class="items-form-title">
     <h5>ChatWork</h5>
-    <%= link_to image_tag('dentaku.png' , size: '60x60', class: "getumatu-btn-icon"), assist_attendances_path %>
-    <div class='info-text'>※休憩時間、手当て、施術時間を<br>
-    自動入力します。(日報参照)</div>
+    <%= link_to image_tag('ChatWork.png' , size: '60x60', class: "chatwork-btn-icon"), "/" %>
+    <div class='info-text'>勤怠管理をチャットワークで報告する</div>
   </div>
 </div>
 <%= render "shared/footer"%>
