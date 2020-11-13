@@ -109,7 +109,7 @@ sub {
 input,
 textarea,
 select {
-  font-family:inherit;
+  font-family:mplus;
   font-size:inherit;
   font-weight:inherit;
 }

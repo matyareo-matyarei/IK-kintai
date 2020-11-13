@@ -1,6 +1,5 @@
 require "google_drive"
 require 'active_support/all'
-# require 'holiday_japan'
 
 
 session = GoogleDrive::Session.from_config("config.json")

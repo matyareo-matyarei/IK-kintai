@@ -1,7 +1,7 @@
 .contents.row {
-  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
-    flex-direction: column;
-    margin: 0 5px 0px;
+  font-family: 'mplus';
+  flex-direction: column;
+  margin: 0 5px 0px;
 }
 
 .attendances{

@@ -7,6 +7,7 @@
         勤務場所
         <span class="indispensable">必須</span>
       </div>
+
       <%= f.collection_select(:work_place_id, WorkPlace.all, :id, :name, {}, {class:"items-text", id:"attendance-work-place"}) %>
       <div class="items-explain">
         <div class="weight-bold-text">
@@ -22,13 +23,13 @@
         <span class="indispensable">必須</span>
       </div>
       <div class="form">
-        <div class='input-name-wrap'>
+        <div class='radioArea'>
           <%= f.radio_button :in_out, :true, {style: "display: inline-block;"} %>
           <%= f.label :in_out_true, "出勤" %>
           <%= f.radio_button :in_out, :false, {style: "display: inline-block;"} %>
           <%= f.label :in_out_false, "退勤" %>
         </div>
-    </div>
+      </div>
 
       <div class="weight-bold-text">時刻
         <span class="indispensable">必須</span>
