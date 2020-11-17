@@ -47,7 +47,9 @@ while i <= 36
   end
   i += 1
 end
+# 手当て入力
 # User登録が非常勤(full_partがfalse)の人は出勤日の内、土と日・祝日に手当てが入る
+eight = Time.parse("8:00") # 8時間の値eight
 unless $user.full_part
   (6..sheet.num_rows).each do |row| #セルの行で値が入っているところまで
     begin
