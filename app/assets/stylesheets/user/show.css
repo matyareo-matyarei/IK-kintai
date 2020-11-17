@@ -2,17 +2,18 @@
   font-family: 'mplus';
   flex-direction: column;
   margin: 0 5px 0px;
+  font-size: 24px;
 }
 
 .attendances{
   height: 30%;
   flex-direction: column;
-
+  margin-bottom: 30px;
 }
 
 .content_post{
   color: cornflowerblue;
-  font-size: 13px;
+  font-size: 19px;
   display: flex;
   justify-content: center;
 }
@@ -25,8 +26,9 @@
 .userinfo {
   border: 0.3px cornflowerblue solid ;
   padding: 1px 15px;
+  font-size: 20px;
 }
 
 .rireki {
-  margin-left: 38%;
+  margin-left: 35%;
 }

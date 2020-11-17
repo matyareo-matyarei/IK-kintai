@@ -47,14 +47,18 @@
     <p class='info-text'>※ 社員情報は正しく入力してください。<br>勤怠入力に支障が出る場合があります。</p>
   </div>
   <div class='register-btn'>
-    <%= f.submit "更新" ,class:"register-blue-btn" %>
+    <%= f.submit "入力内容に更新" ,class:"register-blue-btn" %>
   </div>
 <% end %>
 
-  <div class="form-group">
-    <h3>アカウントを取り消す</h3>
-    <%= button_to "アカウントの取消", registration_path(resource_name), data: { confirm: "登録したアカウントを取り消しますか？" }, method: :delete %>
-    <%= link_to "戻る", :back %>
+  <div class="account-group">
+    <%# <h3>アカウントを取り消す</h3> %>
+    <div>
+      <%= button_to "アカウントの取消", registration_path(resource_name), data: { confirm: "登録したアカウントを取り消しますか？" }, method: :delete %>
+    </div>
+    <div>
+      <%= link_to "戻る", :back %>
+    </div>
   </div>
 
 <%= render "shared/footer"%>

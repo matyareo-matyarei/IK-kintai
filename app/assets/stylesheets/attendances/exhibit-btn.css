@@ -1,4 +1,4 @@
-.purchase-btn {
+.current-time-btn {
   width: 120px;
   background: #0099e8;
   box-shadow: 6px 6px 3px #888888;
@@ -10,7 +10,7 @@
   padding: 15px;
 }
 
-.purchase-btn-text {
+.current-time-btn-text {
   color: #fff;
   display: block;
   font-size: 18px;
@@ -18,12 +18,12 @@
   margin-bottom: 5px;
 }
 
-.purchase-btn-icon {
+.current-time-btn-icon {
   width: 60%;
   border-radius: 0.8em;
 }
 
-.purchase-btn button {
+.current-time-btn button {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@
   transition: .3s;
 }
 
-.purchase-btn button:hover {
+.current-time-btn button:hover {
   opacity: 0.2;
   background-color: white;
   border: white;
@@ -42,14 +42,14 @@
 
 .radioArea input[type="radio"] {
   width         : 20pt;        /* 大きさ：横 */
-  height        : 35pt;        /* 大きさ：縦 */
+  height        : 40pt;        /* 大きさ：縦 */
   vertical-align: top;         /* 並び位置   */
   visibility    : hidden;      /* チェックボックスを非表示 */
 }
 
  /* --- チェックボックス直後のlabel --- */
 .radioArea input[type="radio"] + label {
-  padding       : 20px 30px;                  /* labelの余白 */
+  padding       : 20px 32px;                  /* labelの余白 */
   font-size     : 18pt;                       /* labelの文字サイズ */
   font-weight   : bold;                       /* 文字太さ   */
   border        : 2px solid rgba(0, 0, 0, 0); /* labelの枠線 */

@@ -11,6 +11,7 @@ class AttendancesController < ApplicationController
     if @attendance.save
       $attendance = @attendance
       load "spreadsheet/attendance.rb"
+      @attendances = current_user.attendances.order(id: "DESC")
     else
       render :new
     end

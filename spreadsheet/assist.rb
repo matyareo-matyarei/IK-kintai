@@ -51,23 +51,31 @@ end
 unless $user.full_part
   (6..sheet.num_rows).each do |row| #セルの行で値が入っているところまで
     begin
+      kousoku = Time.parse(sheet[row,12]) #拘束時間の値=kousoku
+      day = Date.parse(sheet[row,1]) #各行の日付
       if sheet[row,3].present? && sheet[row,4].present? #出勤退勤入力がされていたら
-        if Date.parse(sheet[row,1]).sunday? #日曜なら
-          sheet[row,11] = 800
-        elsif Date.parse(sheet[row,1]).national_holiday? #祝日なら
-          sheet[row,11] = 800
-        elsif Date.parse(sheet[row,1]).saturday? #土曜なら
-          sheet[row,11] = 400
+        if day.sunday? || day.national_holiday?         #日・祝日なら
+          if kousoku.hour >= eight.hour #8h以上なら１日手当て、それ以下は半日手当て
+            sheet[row,11] = 800
+          else
+            sheet[row,11] = 400
+          end
+        elsif day.saturday? #土曜なら
+          if kousoku.hour >= eight.hour 
+            sheet[row,11] = 400
+          else
+            sheet[row,11] = 200
+          end
         else
-          sheet[row,11] = "" #土日祝日じゃないなら手当てはなし
+          sheet[row,11] = "" #土日祝日じゃなければ手当てなし
         end
       else
-        sheet[row,11] = "" #出退勤入ってないと手当てはなし
+        sheet[row,11] = "" # 出退勤入ってなければ手当てなし
       end
     rescue => e
       puts e.message
     end
-  end
+  end  
 end
 
 # 非常勤の施術者は日報の施術時間を入力

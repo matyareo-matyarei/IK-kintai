@@ -5,6 +5,25 @@
     <h3>入力が完了しました。</h3><br>
     <a class="btn" href="/">勤怠入力へ戻る</a>
   </div>
+
+    <div class="attendances">
+  <p class="rireki">出退勤入力履歴(最新10件)</p>
+    <% @attendances.first(10).each do |attendance| %>
+      <div class="content_post" >
+        <%= WorkPlace.find(attendance.work_place_id).name %>
+        <p class="attendances-info">
+        <%= attendance.work_days %>
+        <% if attendance.in_out %>
+          <span>出</span>
+        <% else %>
+          <span>退</span>
+        <% end %>
+        <span class="name"><%= attendance.work_time.strftime("%H:%M") %></span>
+        </p>
+      </div>
+    <% end %>
+  </div>
+
   <div class="items-form-title">
     <h4>補足情報入力</h4>
     <%= link_to image_tag('dentaku.png' , size: '60x60', class: "getumatu-btn-icon"), assist_attendances_path %>
