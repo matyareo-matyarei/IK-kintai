@@ -6,7 +6,7 @@ class User < ApplicationRecord
     validates :full_name, format: { with: /\A[ぁ-んァ-ン一-龥]+\z/, message: 'は全角で入力してください' }
   end
   validates :full_part, inclusion: { in: [true, false], message: 'を選んでください' }
-  
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :affiliation
 
@@ -14,5 +14,4 @@ class User < ApplicationRecord
   validates :affiliation_id, numericality: { other_than: 1, message: 'を選んでください' }
 
   has_many :attendances
-  
 end

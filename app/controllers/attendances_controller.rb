@@ -10,15 +10,15 @@ class AttendancesController < ApplicationController
     @attendance = Attendance.new(attendance_params)
     if @attendance.save
       $attendance = @attendance
-      load "spreadsheet/attendance.rb"
-      @attendances = current_user.attendances.order(id: "DESC")
+      load 'spreadsheet/attendance.rb'
+      @attendances = current_user.attendances.order(id: 'DESC')
     else
       render :new
     end
   end
-  
+
   def assist
-    load "spreadsheet/assist.rb"
+    load 'spreadsheet/assist.rb'
   end
 
   private

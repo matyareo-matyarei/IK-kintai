@@ -6,10 +6,9 @@ class Attendance < ApplicationRecord
 
   validates :work_days, presence: true
   validates :work_time, presence: true
-  
+
   validates :in_out, inclusion: { in: [true, false], message: 'を選んでください' }
   validates :carfare, numericality: { only_integer: true, message: 'は半角数字で入力してください' }, allow_blank: true
-    
-  belongs_to :user
 
+  belongs_to :user
 end
