@@ -1,66 +1,68 @@
-    <%= render 'shared/error_messages', model: f.object %>
+  <%= render 'shared/error_messages', model: f.object %>
 
-    <div class="img-upload">
+  <div class="img-upload">
+  </div>
+  <div class="new-items">
+    <div class="weight-bold-text">
+      勤務場所
+      <span class="indispensable">必須</span>
     </div>
-    <div class="new-items">
+
+    <%= f.collection_select(:work_place_id, WorkPlace.all, :id, :name, {}, {class:"items-text", id:"attendance-work-place"}) %>
+    <div class="items-explain">
       <div class="weight-bold-text">
-        勤務場所
+        日付
         <span class="indispensable">必須</span>
       </div>
+      <%= f.date_field :work_days, {class:"items-text", id:"attendance-work-days"} %>
+    </div>
+  </div>
 
-      <%= f.collection_select(:work_place_id, WorkPlace.all, :id, :name, {}, {class:"items-text", id:"attendance-work-place"}) %>
-      <div class="items-explain">
-        <div class="weight-bold-text">
-          日付
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.date_field :work_days, {class:"items-text", id:"attendance-work-days"} %>
+  <div class="new-items">
+    <div class="weight-bold-text">時刻
+      <span class="indispensable">必須</span>
+    </div>
+      <%= f.time_field :work_time, {class:"items-text", id:"attendance-work-time"} %>
+  </div>
+    
+  <div class="items-detail">
+    <div class="weight-bold-text">出勤／退勤
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="form">
+      <div class='radioArea'>
+        <%= f.radio_button :in_out, :true, {style: "display: inline-block;"} %>
+        <%= f.label :in_out_true, "出勤" %>
+        <%= f.radio_button :in_out, :false, {style: "display: inline-block;"} %>
+        <%= f.label :in_out_false, "退勤" %>
       </div>
     </div>
 
-    <div class="items-detail">
-      <div class="weight-bold-text">出勤／退勤
-        <span class="indispensable">必須</span>
+  <div class="form-carfare">
+    <div class="weight-bold-text question-text">
+      <span>交通費（あればご記入下さい）<br></span>
+    </div>
+    <div>
+      <div class="carfare-content">
+        <span class="form-yen">¥</span>
+        <%= f.text_field :carfare, class:"carfare-input", id:"item-carfare", placeholder:"例）300" %>
       </div>
-      <div class="form">
-        <div class='radioArea'>
-          <%= f.radio_button :in_out, :true, {style: "display: inline-block;"} %>
-          <%= f.label :in_out_true, "出勤" %>
-          <%= f.radio_button :in_out, :false, {style: "display: inline-block;"} %>
-          <%= f.label :in_out_false, "退勤" %>
-        </div>
-      </div>
-
-      <div class="weight-bold-text">時刻
-        <span class="indispensable">必須</span>
-      </div>
-        <%= f.time_field :work_time, {class:"items-text", id:"attendance-work-time"} %>
-
-    <div class="form-carfare">
-      <div class="weight-bold-text question-text">
-        <span>交通費（あればご記入下さい）<br></span>
-      </div>
-      <div>
-        <div class="carfare-content">
-          <span class="form-yen">¥</span>
-          <%= f.text_field :carfare, class:"carfare-input", id:"item-carfare", placeholder:"例）300" %>
-        </div>
-        <div class="carfare-content">
-          <span>1日にかかった総額をご記入ください</span>
-          <span>
-            <span id='profit'></span>
-          </span>
-        </div>
+      <div class="carfare-content">
+        <span>1日にかかった総額をご記入ください</span>
+        <span>
+          <span id='profit'></span>
+        </span>
       </div>
     </div>
+  </div>
 
-    <%# 注意書き %>
-    <div class="caution">
-      <p class="sentence">
-        勤務場所・日付・出勤/退勤・時刻は
-      </p>
-      <p class="sentence">
-        必ず入力をご確認ください。
-      </p>
-    </div>
-    <%# /注意書き %>
+  <%# 注意書き %>
+  <div class="caution">
+    <p class="sentence">
+      勤務場所・日付・出勤/退勤・時刻は
+    </p>
+    <p class="sentence">
+      必ず入力をご確認ください。
+    </p>
+  </div>
+  <%# /注意書き %>

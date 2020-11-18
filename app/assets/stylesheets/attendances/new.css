@@ -16,7 +16,7 @@
   background-color: #FFF;
   width: 70vw;
   min-width: 450px;
-  padding: 10vh 15vw;
+  padding: 5vh 15vw;
 }
 
 .items-form-title {
@@ -175,4 +175,30 @@
 
 .inc {
   font-size: 13px;
+}
+
+.radioArea input[type="radio"] {
+  width         : 20pt;        /* 大きさ：横 */
+  height        : 40pt;        /* 大きさ：縦 */
+  vertical-align: top;         /* 並び位置   */
+  visibility    : hidden;      /* チェックボックスを非表示 */
+}
+
+ /* --- チェックボックス直後のlabel --- */
+.radioArea input[type="radio"] + label {
+  padding       : 20px 32px;                  /* labelの余白 */
+  font-size     : 18pt;                       /* labelの文字サイズ */
+  font-weight   : bold;                       /* 文字太さ   */
+  border        : 2px solid rgba(0, 0, 0, 0); /* labelの枠線 */
+  border-radius : 5px;                        /* labelの角丸 */
+  cursor        : pointer;                    /* カーソル設定 */
+  transition    : .2s;                        /* なめらか変化 */
+}
+ /* --- 選択されたチェックボックス直後のlabel --- */
+.radioArea input[type="radio"]:checked + label {
+  border        : 2px solid #0e51a2; /* labelの枠線 */
+}
+ /* --- 選択されていないチェックボックス直後のlabelにマウスが乗った --- */
+.radioArea input[type="radio"]:not(:checked) + label:hover {
+  background    : rgba(30, 101, 255, 0.2);     /* lebelの背景 */
 }
