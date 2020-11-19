@@ -5,18 +5,18 @@ session = GoogleDrive::Session.from_config('config.json')
 
 case $user.affiliation_id
 when 2 # 浅草
-  spreads = session.spreadsheet_by_key('1Hy528GhW6XYnoa6KvcfaKyAn98QF9nYVIdFBL-BRJdw')
+  spreads = session.spreadsheet_by_key('1c7my0A20BFbcG9hC62MQr1TkwEYj2wjLPeSa7BUio2Q')
 when 3 # 千束
-  spreads = session.spreadsheet_by_key('17uvb27n9d-pobk0kVQy-YwJbXhxpEaOt2RBP0vB2j4M')
+  spreads = session.spreadsheet_by_key('1DgfB3Ayrk0QA7VUqeTO3P0aoL1pwgZKCPsnWmtHjLH8')
 when 4 # 日暮里
-  spreads = session.spreadsheet_by_key('10s6PURZRWmX1GC8Fg9eUGk208_GQlX49K3wcjjlUYQ0')
+  spreads = session.spreadsheet_by_key('1_cLUUjCG-M16FvS9I_s9m7L6khCr4IjWNWmRc75zFZg')
 when 5 # 本部
-  spreads = session.spreadsheet_by_key('17u4Ak5YEMLAqW3WI3gtJkLYqmnFFdXs1oaOA-8TmvnY')
+  spreads = session.spreadsheet_by_key('1gKlozDb0P8VSYQw2wsR11JPgCtgVvvr-sbHvl45ShhI')
 end
-# [1Hy528GhW6XYnoa6KvcfaKyAn98QF9nYVIdFBL-BRJdw]浅草11月の勤怠
-# [17uvb27n9d-pobk0kVQy-YwJbXhxpEaOt2RBP0vB2j4M]千束11月の勤怠
-# [10s6PURZRWmX1GC8Fg9eUGk208_GQlX49K3wcjjlUYQ0]日暮里11月の勤怠
-# [17u4Ak5YEMLAqW3WI3gtJkLYqmnFFdXs1oaOA-8TmvnY]本部11月の勤怠
+# [1DgfB3Ayrk0QA7VUqeTO3P0aoL1pwgZKCPsnWmtHjLH8]千束11月の勤怠
+# [1c7my0A20BFbcG9hC62MQr1TkwEYj2wjLPeSa7BUio2Q]浅草11月の勤怠
+# [1_cLUUjCG-M16FvS9I_s9m7L6khCr4IjWNWmRc75zFZg]日暮里11月の勤怠
+# [1gKlozDb0P8VSYQw2wsR11JPgCtgVvvr-sbHvl45ShhI]本部11月の勤怠
 
 # Userのfull_nameと一致するワークシートを取得
 sheet_tittle = $user.full_name
