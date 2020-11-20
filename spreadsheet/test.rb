@@ -42,7 +42,7 @@ nippou.each do |nippou|
       treatment_time = kadou[namematch_line, i] # namematch_lineと1〜31日まで
       if treatment_time.present? # 施術時間が入っていれば
         sheet[i + 3, 7] = "0:0#{(treatment_time.to_f * 10).to_i}" # 勤怠の施術時間に反映(小数点表示)
-        treatment_time_slice = sheet[i + 3, 7].slice(-3,3)
+        treatment_time_slice = sheet[i + 3, 7].slice(-3, 3)
         case nippou
         when asakusa
           treatment_asa[:"#{i}"] = treatment_time_slice
@@ -58,17 +58,16 @@ nippou.each do |nippou|
     i += 1
   end
 end
-puts treatment_asa,treatment_sen,treatment_nippo
-#同日に施術時間が入っているシンボルiを定義(Arrayクラス)
+puts treatment_asa, treatment_sen, treatment_nippo
+# 同日に施術時間が入っているシンボルiを定義(Arrayクラス)
 i = treatment_asa.keys & treatment_sen.keys | treatment_asa.keys & treatment_nippo.keys | treatment_sen.keys & treatment_nippo.keys
-if i.present? #同日施術時間の入力があれば
-  i.each do |key| #同日の施術時間を足したdoujitu_treatment_sumを定義
+if i.present? # 同日施術時間の入力があれば
+  i.each do |key| # 同日の施術時間を足したdoujitu_treatment_sumを定義
     doujitu_treatment_sum = treatment_asa[:"#{key}"].to_i + treatment_sen[:"#{key}"].to_i + treatment_nippo[:"#{key}"].to_i
     puts doujitu_treatment_sum
-    #シンボルi(key)を一度文字列に変換、数字変換しその値(key)を元にスプレッドシートに反映
+    # シンボルi(key)を一度文字列に変換、数字変換しその値(key)を元にスプレッドシートに反映
     sheet[key.to_s.to_i + 3, 7] = "0:0#{doujitu_treatment_sum}"
   end
 end
-
 
 sheet.save

@@ -15,25 +15,26 @@ eight = Time.parse('8:00') # 8時間の値eight
                     if day.sunday? || day.national_holiday? # 日曜又は祝日なら
                       if kousoku.hour >= eight.hour # 8h以上なら１日手当て
                         800
-                      else #8h未満の場合、営業時間(10::00~19:00)のうち1hにつき*100
-                        if Time.parse(sheet[row, 3]) <= Time.parse('10:00') #10時前出勤
-                          (Time.parse(sheet[row, 4]) - Time.parse('10:00'))/3600*100
-                        elsif Time.parse(sheet[row, 4]) >= Time.parse('19:00') #19時後退勤
-                          (Time.parse('19:00') - Time.parse(sheet[row, 3]))/3600*100
-                        else #出退勤が営業時間内
-                          (Time.parse(sheet[row, 4]) - Time.parse(sheet[row, 3]))/3600*100
+                      else # 8h未満の場合、営業時間(10::00~19:00)のうち1hにつき*100
+                        if Time.parse(sheet[row, 3]) <= Time.parse('10:00') # 10時前出勤
+                          (Time.parse(sheet[row, 4]) - Time.parse('10:00')) / 3600 * 100
+                        elsif Time.parse(sheet[row, 4]) >= Time.parse('19:00') # 19時後退勤
+                          (Time.parse('19:00') - Time.parse(sheet[row, 3])) / 3600 * 100
+                        else # 出退勤が営業時間内
+                          (Time.parse(sheet[row, 4]) - Time.parse(sheet[row, 3])) / 3600 * 100
                         end
                       end
                     elsif day.saturday? # 土曜
                       if kousoku.hour >= eight.hour
                         400
-                      else #8h未満の場合、営業時間(10::00~19:00)のうち1hにつき*50
-                        if Time.parse(sheet[row, 3]) <= Time.parse('10:00') #10時前出勤
-                          (Time.parse(sheet[row, 4]) - Time.parse('10:00'))/3600*50
-                        elsif Time.parse(sheet[row, 4]) >= Time.parse('19:00') #19時後退勤
-                          (Time.parse('19:00') - Time.parse(sheet[row, 3]))/3600*50
-                        else #出退勤が営業時間内
-                          (Time.parse(sheet[row, 4]) - Time.parse(sheet[row, 3]))/3600*50
+                      else # 8h未満の場合、営業時間(10::00~19:00)のうち1hにつき*50
+                        if Time.parse(sheet[row, 3]) <= Time.parse('10:00') # 10時前出勤
+                          (Time.parse(sheet[row, 4]) - Time.parse('10:00')) / 3600 * 50
+                        elsif Time.parse(sheet[row, 4]) >= Time.parse('19:00') # 19時後退勤
+                          puts Time.parse(sheet[row, 3])
+                          (Time.parse('19:00') - Time.parse(sheet[row, 3])) / 3600 * 50
+                        else # 出退勤が営業時間内
+                          (Time.parse(sheet[row, 4]) - Time.parse(sheet[row, 3])) / 3600 * 50
                         end
                       end
                     else
