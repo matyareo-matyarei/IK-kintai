@@ -3,7 +3,8 @@
 <img width="900" alt="IK-kintai" src="https://user-images.githubusercontent.com/71745650/99880133-dbb6d700-2c54-11eb-8c8f-7c9c7bb5f7e8.png">
 
 # アプリケーション概要
-IKという会社の勤怠管理システムをアプリケーション化させたもの
+IKという会社の勤怠管理システムをアプリケーションで完結させたもの
+アプリのフォームで勤怠情報入力→勤怠管理表（Googleスプレッドシート）に反映
 # URL
 https://ik-kintai.herokuapp.com/
 # テスト用アカウント
@@ -22,6 +23,8 @@ https://ik-kintai.herokuapp.com/
 
 # 実装した機能についてのGIFと説明
 ## ユーザー登録機能 ![ログイン・新規登録](https://user-images.githubusercontent.com/71745650/99880557-6ac4ee80-2c57-11eb-9c57-562cd93530b0.gif)
+- フルネーム / Email / パスワード / 所属院 / 雇用形態（常勤か非常勤か）
+
 ## ユーザー情報/編集/削除　![ユーザー情報閲覧](https://user-images.githubusercontent.com/71745650/99880563-73b5c000-2c57-11eb-82a0-45b08373dd1b.gif)
 - rubyファイルからGoogleスプレッドシートに反映
 - フォーム送信機能
