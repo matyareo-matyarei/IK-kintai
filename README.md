@@ -32,11 +32,19 @@ https://ik-kintai.herokuapp.com/
 フルネーム / Email / 所属院 / 雇用形態（常勤か非常勤か）  
 ![ユーザー編集:削除resize](https://user-images.githubusercontent.com/71745650/99881252-fe98b980-2c5b-11eb-8fc5-d1796407f588.gif)
 
+### フォーム送信機能
+フォームで送信する情報  
+勤務場所 / 勤務日（日付）/ 出勤か退勤か / 時刻 / 交通費  
+
+・使用するユーザーがフォームを送信すれば、上記の勤怠情報がスプレッドシートに入力される  
+※正しく入力されていないと送信されないよう、バリデーションを組んでいる（日本語で表示）  
+![フォーム送信resize](https://user-images.githubusercontent.com/71745650/99881955-520d0680-2c60-11eb-9137-8fa30bdcdf7e.gif)
+
+
 ### 勤怠入力履歴  
  打刻漏れを防ぐ為、フォームの送信履歴をユーザーは確認できる  
  <img width="300" src="https://user-images.githubusercontent.com/71745650/99881620-2557ef80-2c5e-11eb-8f02-9c2568f76d4e.png">
 
-### フォーム送信機能
 
 ### 現在時刻反映ボタン
 
