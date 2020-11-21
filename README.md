@@ -33,7 +33,7 @@ https://ik-kintai.herokuapp.com/
 ![ユーザー編集:削除resize](https://user-images.githubusercontent.com/71745650/99881252-fe98b980-2c5b-11eb-8fc5-d1796407f588.gif)
 
 ### 勤怠入力履歴  
- 打刻漏れを防ぐ為、フォームの送信履歴をユーザーは確認できる  <img widh="300" src="https://user-images.githubusercontent.com/71745650/99881620-2557ef80-2c5e-11eb-8f02-9c2568f76d4e.png">
+ 打刻漏れを防ぐ為、フォームの送信履歴をユーザーは確認できる  <img width="300" src="https://user-images.githubusercontent.com/71745650/99881620-2557ef80-2c5e-11eb-8f02-9c2568f76d4e.png">
 
 ### フォーム送信機能
 
