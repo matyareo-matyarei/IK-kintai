@@ -22,15 +22,15 @@ https://ik-kintai.herokuapp.com/
 - 日付、出退勤の時間は入力の手間を端折る為に現時刻ボタン1つで自動入力させる
 
 # 実装した機能についてのGIFと説明
-## ユーザー登録機能![ログイン・新規登録resize](https://user-images.githubusercontent.com/71745650/99881247-f8a2d880-2c5b-11eb-8980-bcdc61cf10b2.gif)
-
+## ユーザー登録機能
 - フルネーム / Email / パスワード / 所属院 / 雇用形態（常勤か非常勤か）
+![ログイン・新規登録resize](https://user-images.githubusercontent.com/71745650/99881247-f8a2d880-2c5b-11eb-8980-bcdc61cf10b2.gif)
 
-## ユーザー情報/編集/削除![ユーザー編集:削除resize](https://user-images.githubusercontent.com/71745650/99881252-fe98b980-2c5b-11eb-8fc5-d1796407f588.gif)
-
+## ユーザー情報/編集/削除
 - スタッフの状況変更に合わせて編集可能
 フルネーム / Email /
 所属院 / 雇用形態（常勤か非常勤か）
+![ユーザー編集:削除resize](https://user-images.githubusercontent.com/71745650/99881252-fe98b980-2c5b-11eb-8fc5-d1796407f588.gif)
 
 - rubyファイルからGoogleスプレッドシートに反映
 - フォーム送信機能
