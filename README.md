@@ -1,6 +1,6 @@
 # アプリケーション名
 <img src="https://user-images.githubusercontent.com/71745650/98325424-1eac6400-2032-11eb-899c-735967326da2.jpg" width=30%>
-<img width="1610" alt="IK-kintai" src="https://user-images.githubusercontent.com/71745650/99880133-dbb6d700-2c54-11eb-8c8f-7c9c7bb5f7e8.png">
+<img width= alt="IK-kintai" src="https://user-images.githubusercontent.com/71745650/99880133-dbb6d700-2c54-11eb-8c8f-7c9c7bb5f7e8.png">
 
 IKーkintai  
 # アプリケーション概要
