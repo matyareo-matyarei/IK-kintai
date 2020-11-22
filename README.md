@@ -46,9 +46,17 @@ https://ik-kintai.herokuapp.com/
  <img width="300" src="https://user-images.githubusercontent.com/71745650/99881620-2557ef80-2c5e-11eb-8f02-9c2568f76d4e.png">
 
 
-### 現在時刻反映ボタン
+### 現在時刻反映ボタン  
+ 入力の手間を省く為、現時刻ボタンを押すと「日付」「時刻」が入力される
+![現時刻入力resize](https://user-images.githubusercontent.com/71745650/99892118-e608bd80-2cb4-11eb-81da-517041837a33.gif)
 
-### 休憩時間、手当て、施術時間の自動入力
+### 休憩時間、手当て、施術時間の自動入力  
+ フォームの下にある補助入力ボタンを押すと以下が全て入力される  
+- 休憩時間（出退勤の差が8h以上で1:00付加）
+- 手当  
+（非常勤で日/祝 最大→800円、土→400円）  
+　営業時間(10::00~19:00)のうち、日祝：1h×¥100　or 土：1h×¥50  
+- 施術時間（非常勤で3院分の日報に入力されている施術時間を入力）  
 ![補助入力resize](https://user-images.githubusercontent.com/71745650/99892014-91187780-2cb3-11eb-8c49-4ea6e1bddae5.gif)
 
 
