@@ -25,11 +25,13 @@
       <label class="form-text">勤務形態(常勤／非常勤)</label>
       <span class="indispensable">必須</span>
     </div>
-    <div class='input-name-wrap'>
-      <%= f.radio_button :full_part, :true, {style: "display: inline-block;"} %>
-      <%= f.label :full_part_true, "常勤" %>
-      <%= f.radio_button :full_part, :false, {style: "display: inline-block;"} %>
-      <%= f.label :full_part_false, "非常勤" %>      
+    <div class="form">
+      <div class='radioArea'>
+        <%= f.radio_button :full_part, :true, {style: "display: inline-block;"} %>
+        <%= f.label :full_part_true, "常勤" %>
+        <%= f.radio_button :full_part, :false, {style: "display: inline-block;"} %>
+        <%= f.label :full_part_false, "非常勤" %>      
+      </div>
     </div>
   </div>
 

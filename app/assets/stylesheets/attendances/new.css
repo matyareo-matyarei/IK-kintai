@@ -40,7 +40,7 @@
 }
 
 .new-items {
-  padding: 2vh 0;
+  padding: 1vh 0;
 }
 
 .items-text {
@@ -58,11 +58,6 @@
 }
 
 .items-detail {
-  padding: 2vh 0;
-}
-
-.items-detail>.form {
-  width: 300px;
   padding: 2vh 0;
 }
 

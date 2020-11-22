@@ -24,9 +24,12 @@
 }
 
 .userinfo {
-  border: 0.3px cornflowerblue solid ;
-  padding: 1px 15px;
-  font-size: 20px;
+  border: 0.3px cornflowerblue solid;
+  margin: 15px 10px 0px;
+  padding: 10px 15px;
+  font-size: x-large;
+  display: block;
+  border-radius: 4px;
 }
 
 .rireki {

@@ -49,13 +49,17 @@
   font-weight: bold;
 }
 
+.form {
+  display: block;
+  margin-top: 50px;
+}
 .sentence {
   font-size: x-large;
 }
 
 .input-default {
   width: 100%;
-  margin-top: 5px;
+  margin-top: 15px;
   height: 3.5vh;
   padding: 10px 16px 8px;
   border-radius: 4px;
@@ -94,6 +98,8 @@
 
 .input-name-wrap {
   font-size: xx-large;
+  margin: 20px 50px;
+  
 }
 
 .form-bottom-text {
