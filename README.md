@@ -49,6 +49,8 @@ https://ik-kintai.herokuapp.com/
 ### 現在時刻反映ボタン
 
 ### 休憩時間、手当て、施術時間の自動入力
+![補助入力resize](https://user-images.githubusercontent.com/71745650/99892014-91187780-2cb3-11eb-8c49-4ea6e1bddae5.gif)
+
 
 # 実装予定の機能
 ### レスポンシブWebデザイン対応
