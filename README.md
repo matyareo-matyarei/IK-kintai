@@ -8,7 +8,7 @@ IKという会社の勤怠管理システムをアプリケーションで完結
 # URL
 https://ik-kintai.herokuapp.com/
 # テスト用アカウント
-氏名：水野雅之  Email：a@a  パスワード：aaaaaa
+氏名：テスト  Email：a@a  パスワード：aaaaaa
 
 # 利用方法
 
