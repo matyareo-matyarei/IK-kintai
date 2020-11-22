@@ -196,7 +196,7 @@
  /* --- チェックボックス直後のlabel --- */
 .radioArea input[type="radio"] + label {
   padding       : 20px 32px;                  /* labelの余白 */
-  font-size     : 18pt;                       /* labelの文字サイズ */
+  font-size     : xx-large;                       /* labelの文字サイズ */
   font-weight   : bold;                       /* 文字太さ   */
   border        : 2px solid rgba(0, 0, 0, 0); /* labelの枠線 */
   border-radius : 5px;                        /* labelの角丸 */
