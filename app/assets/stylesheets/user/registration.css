@@ -8,7 +8,7 @@
 }
 
 .form-wrap {
-  width: 80%;
+  width: 100%;
   background-color: white;
   padding-bottom: 70px;
   margin: auto;
@@ -45,26 +45,30 @@
 }
 
 .form-text {
-  font-size: 24px;
+  font-size: xx-large;
   font-weight: bold;
+}
+
+.sentence {
+  font-size: x-large;
 }
 
 .input-default {
   width: 100%;
   margin-top: 5px;
-  height: 48px;
+  height: 3.5vh;
   padding: 10px 16px 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
   background: #fff;
-  font-size: 20px;
+  font-size: x-large;
   resize: none;
 }
 
 .info-text {
   color: #888;
   font-size: x-large;
-  margin-top: 3px;
+  margin: 3px auto 20px;
 }
 
 .form-info-header {
@@ -89,7 +93,7 @@
 }
 
 .input-name-wrap {
-  font-size: 20px;
+  font-size: xx-large;
 }
 
 .form-bottom-text {
@@ -119,7 +123,7 @@
   border: 1px solid #0099e8;
   color: #fff;
   line-height: 48px;
-  font-size: 20px;
+  font-size: x-large;
   cursor: pointer;
   border-radius: 0.4em;
   box-shadow: 6px 6px 3px #888888;
@@ -143,8 +147,8 @@
   width: 50%;
   display: flex;
   justify-content: space-around;
-  margin: 0 auto;
+  margin: 20px auto 23px;
   padding: 20px 0 30px;
-  font-size: 20px;
+  font-size: x-large;
 }
 
