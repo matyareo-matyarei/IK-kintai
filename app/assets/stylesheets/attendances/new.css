@@ -202,3 +202,19 @@
 .radioArea input[type="radio"]:not(:checked) + label:hover {
   background    : rgba(30, 101, 255, 0.2);     /* lebelの背景 */
 }
+
+@media screen and (max-width: 480px) {
+  .items-form-main {
+    background-color: #FFF;
+    width: 70vw;
+    min-width: 450px;
+    padding: 1vh 15vw;
+  }
+  .top-page-header {
+    width: 100vw;
+    padding: 1vh 15vw;
+    display: flex;
+  }
+  
+  
+}
