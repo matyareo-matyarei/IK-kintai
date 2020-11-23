@@ -50,17 +50,19 @@
       </div>
       <div class="carfare-content">
         <span>1日にかかった総額を入力してください</span>
-        <span>
-          <span id='profit'></span>
-        </span>
       </div>
+    </div>
+    <div class="weight-bold-text question-text">
+      <span>備考（任意）<br></span>
+      <%= f.text_field :remarks, class:"carfare-input", id:"item-carfare", placeholder:"例）プロラボ講習会参加" %>
+
     </div>
   </div>
 
   <%# 注意書き %>
   <div class="caution">
     <p class="sentence">
-      勤務場所・日付・出勤/退勤・時刻は
+      勤務場所・日付・出/退勤・時刻は
     </p>
     <p class="sentence">
       必ず入力をご確認ください。

@@ -32,7 +32,7 @@ class AttendancesController < ApplicationController
   private
 
   def attendance_params
-    params.require(:attendance).permit(:work_place_id, :work_days, :in_out, :work_time, :carfare).merge(user_id: current_user.id)
+    params.require(:attendance).permit(:work_place_id, :work_days, :in_out, :work_time, :carfare, :remarks).merge(user_id: current_user.id)
   end
 
   def set_user

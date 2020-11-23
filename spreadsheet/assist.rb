@@ -93,11 +93,10 @@ unless $user.full_part
                       else
                         '' # 土日祝日じゃない
                       end
-                    else
-                      '' # 出退勤入ってない
                     end
   rescue StandardError => e
     puts e.message
+    sheet[row, 11] = '' # 出退勤入ってない
   end
 end
 

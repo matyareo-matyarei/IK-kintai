@@ -39,8 +39,15 @@ end
 # 勤務場所を入力
 sheet[inputline, 8] = WorkPlace.find($attendance.work_place_id).name.to_s
 
-# 交通費の入力があれば入力
+# 交通費入力（あれば）
 sheet[inputline, 10] = $attendance.carfare.to_s if $attendance.carfare.present?
+
+# 備考欄入力（あれば）
+if $user.full_part #常勤なら
+  sheet[inputline, 17] = $attendance.remarks.to_s if $attendance.remarks.present?
+else #非常勤なら
+  sheet[inputline, 16] = $attendance.remarks.to_s if $attendance.remarks.present?
+end
 
 # シートの保存
 sheet.save

@@ -90,6 +90,7 @@ https://ik-kintai.herokuapp.com/
 | in_out        | boolean    | null: false                    |
 | work_time     | time       | null: false                    |
 | carfare       | integer    |                                |
+| remarks       | text       |                                |
 | user          | references | null: false, foreign_key: true |
 
 ### Association

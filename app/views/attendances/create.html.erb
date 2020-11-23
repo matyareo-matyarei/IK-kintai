@@ -23,7 +23,7 @@
         <% if attendance.carfare.present? %>
           <%= "¥#{attendance.carfare}" %>
         <% end %>
-        <%= link_to '削除', attendance_path(attendance.id), data: { confirm: "出退勤記録を取り消しますか？※勤務場所、交通費記録も削除されます" }, method: :delete, class:'btn2' %>
+        <%= link_to '削除', attendance_path(attendance.id), data: { confirm: "出退勤記録を取り消しますか？※勤務場所、交通費、備考記録も削除されます" }, method: :delete, class:'btn2' %>
         </p>
       </div>
     <% end %>

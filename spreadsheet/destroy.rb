@@ -42,6 +42,13 @@ sheet[inputline, 8] = ""
 # 交通費の入力の削除
 sheet[inputline, 10] = ""
 
+# 備考欄入力（あれば）
+if $user.full_part #常勤なら
+  sheet[inputline, 17] = ""
+else #非常勤なら
+  sheet[inputline, 16] = ""
+end
+
 
 sheet.save
 

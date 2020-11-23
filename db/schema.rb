@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_11_07_012828) do
     t.boolean "in_out", null: false
     t.time "work_time", null: false
     t.integer "carfare"
+    t.text "remarks"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
