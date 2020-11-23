@@ -26,3 +26,11 @@
   transition: .3s;
 }
 
+.btn {
+  text-decoration: none;
+}
+.btn2 {
+  text-decoration: none;
+  border: 1px solid darkolivegreen;
+  color: darkolivegreen;
+}

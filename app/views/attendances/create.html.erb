@@ -6,8 +6,8 @@
     <a class="btn" href="/">勤怠入力へ戻る</a>
   </div>
 
-    <div class="attendances">
-  <p class="rireki">出退勤入力履歴(最新10件)</p>
+  <div class="attendances">
+    <p class="rireki">出退勤入力履歴(最新10件まで)</p>
     <% @attendances.first(10).each do |attendance| %>
       <div class="content_post" >
         <%= WorkPlace.find(attendance.work_place_id).name %>
@@ -19,6 +19,11 @@
           <span>退</span>
         <% end %>
         <span class="name"><%= attendance.work_time.strftime("%H:%M") %></span>
+        --
+        <% if attendance.carfare.present? %>
+          <%= "¥#{attendance.carfare}" %>
+        <% end %>
+        <%= link_to '削除', attendance_path(attendance.id), data: { confirm: "出退勤記録を取り消しますか？※勤務場所、交通費記録も削除されます" }, method: :delete, class:'btn2' %>
         </p>
       </div>
     <% end %>

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "users/show" => "users#show"
 
   root to: "attendances#new"
-  resources :attendances, only: [:new, :create] do
+  resources :attendances, only: [:new, :create, :destroy] do
     collection do
       get 'assist'
     end

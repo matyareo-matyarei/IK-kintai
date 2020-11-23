@@ -1,6 +1,6 @@
 class AttendancesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_user, only: [:create, :assist]
+  before_action :set_user, only: [:create, :assist, :destroy]
 
   def new
     @attendance = Attendance.new
@@ -19,6 +19,14 @@ class AttendancesController < ApplicationController
 
   def assist
     load 'spreadsheet/assist.rb'
+  end
+  
+  def destroy
+    @attendance = Attendance.find(params[:id])
+    $attendance = @attendance
+    load 'spreadsheet/destroy.rb'
+    @attendance.destroy if current_user.id == @attendance.user_id
+    redirect_to users_show_path
   end
 
   private

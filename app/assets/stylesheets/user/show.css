@@ -16,6 +16,7 @@
   font-size: 19px;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .attendances-info {
