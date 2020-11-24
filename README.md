@@ -3,7 +3,7 @@
 <img width="900" alt="IK-kintai" src="https://user-images.githubusercontent.com/71745650/99880133-dbb6d700-2c54-11eb-8c8f-7c9c7bb5f7e8.png">
 
 # アプリケーション概要
-IKという会社の勤怠管理システムをアプリケーションで完結させたもの
+IKという会社の勤怠管理システムをアプリケーションで完結させたもの  
 アプリのフォームで勤怠情報入力→勤怠管理表（Googleスプレッドシート）に反映
 # URL
 https://ik-kintai.herokuapp.com/
