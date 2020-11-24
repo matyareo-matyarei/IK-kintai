@@ -19,7 +19,7 @@ sheets = session.spreadsheet_by_key('17uvb27n9d-pobk0kVQy-YwJbXhxpEaOt2RBP0vB2j4
 # p new_sheets.title
 
 # Google Drive上にディレクトリを作成する
-## ディレクトリを作成する場所をGoogle DriveのURLで指定する
+## ディレクトリを作成する場所をGoogle DriveのURLで指定する(マイドライブのテストディレクトリ)
 drive_dir = session.collection_by_url('https://drive.google.com/drive/folders/1fTYhF5lR0l05GXWuQsMqsJ1YkvqdCmMn')
 
 ## 上記で指定したディレクトリ内に新たにディレクトリを作成する
