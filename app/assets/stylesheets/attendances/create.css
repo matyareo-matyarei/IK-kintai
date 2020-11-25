@@ -9,16 +9,77 @@
 }
 
 .getumatu-btn-icon {
-  box-shadow: 6px 6px 3px #888888;
-  transition: .3s;
-
+  position: relative;
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #00b5ad;
+  text-decoration: none;
+  user-select: none;
 }
 
-.getumatu-btn-icon :hover {
-  box-shadow: none;
-  opacity: 0.7;
-  transition: .3s;
+@keyframes widthChange {
+  0% {
+    width: 0;
+    border-color: #00b5ad;
+  }
+
+  100% {
+    width: 100%;
+    border-color: #00b5ad;
+  }
 }
+
+@keyframes heightChange {
+  0% {
+    height: 1px;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+.getumatu-btn-icon::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 0;
+  height: 1px;
+  content: "";
+  border-top: 1px transparent solid;
+  border-right: 1px transparent solid;
+}
+
+.getumatu-btn-icon:hover::before {
+  animation: widthChange 0.2s forwards, heightChange 0.2s 0.2s forwards;
+}
+
+.getumatu-btn-icon::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  content: "";
+  border-bottom: 1px transparent solid;
+  border-left: 1px transparent solid;
+}
+
+.getumatu-btn-icon:hover::after {
+  animation: widthChange 0.2s forwards, heightChange 0.2s 0.2s forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .chatwork-btn-icon {
   box-shadow: 1px 3px 6px 3px #888888;
@@ -27,10 +88,17 @@
 }
 
 .btn {
+  text-decoration: underline;
+  color: #0051e0;
+}
+.btn:hover {
   text-decoration: none;
 }
 .btn2 {
   text-decoration: none;
   border: 1px solid darkolivegreen;
   color: darkolivegreen;
+}
+.btn2:hover {
+  color: orangered;
 }

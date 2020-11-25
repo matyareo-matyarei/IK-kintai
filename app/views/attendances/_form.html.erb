@@ -40,8 +40,8 @@
     </div>
 
   <div class="form-carfare">
-    <div class="weight-bold-text question-text">
-      <span>交通費（任意）<br></span>
+    <div class="weight-bold-text">交通費
+      <span class="optional">任意</span>
     </div>
     <div>
       <div class="carfare-content">
@@ -49,13 +49,16 @@
         <%= f.text_field :carfare, class:"carfare-input", id:"item-carfare", placeholder:"例）300" %>
       </div>
       <div class="carfare-content">
-        <span>1日にかかった総額を入力してください</span>
+        <span>1日にかかった総額を入力</span>
       </div>
     </div>
-    <div class="weight-bold-text question-text">
-      <span>備考（任意）<br></span>
-      <%= f.text_field :remarks, class:"carfare-input", id:"item-carfare", placeholder:"例）〇〇講習会" %>
-
+    <div class="weight-bold-text">備考
+      <span class="optional">任意</span>
+    </div>
+    <div>
+      <div class="carfare-content">
+        <%= f.text_field :remarks, class:"carfare-input", id:"item-carfare", placeholder:"例）〇〇講習会" %>
+      </div>
     </div>
   </div>
 

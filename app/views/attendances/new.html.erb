@@ -2,7 +2,7 @@
 
 <div class="items-form-contents">
   <header class="items-form-header">
-    <h2 class="items-form-title"><%= "#{current_user.full_name}さんの勤怠情報を入力" %></h2>
+    <h2 class="items-form-title"><%= "#{current_user.full_name}さんの入力フォーム" %></h2>
   </header>
   <div class="items-form-main">
     <%= form_with model: @attendance, local: true do |f| %>
@@ -19,8 +19,8 @@
       <%= f.submit "送信する" ,class:"form-btn" %>
     </div>
     <div class="items-form-title">
-      <h4>補足情報入力</h4>
-      <%= link_to image_tag('dentaku.png' , size: '60x60', class: "getumatu-btn-icon"), assist_attendances_path %>
+      <h4>補足</h4>
+      <%= link_to '月末入力', assist_attendances_path, class: "getumatu-btn-icon" %>
       <div class='info-text'>※休憩時間、手当て、施術時間を<br>
       自動入力します。(日報参照)
       </div>
