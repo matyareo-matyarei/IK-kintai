@@ -60,26 +60,26 @@ end
 # User登録が非常勤(full_partがfalse)の人は出勤日の内、土と日・祝日に手当てが入る
 unless $user.full_part
   (6..sheet.num_rows).each do |row| # セルの行で値が入っているところまで
-    syukkin = Time.parse(sheet[row, 3]) # 出勤時間
-    taikin = Time.parse(sheet[row, 4]) # 退勤時間
-    start = Time.parse('10:00') # 営業開始時間
-    finish = Time.parse('19:00') #営業終了時間
+    syukkin = Time.parse(sheet[row, 3]) # 出勤時刻
+    taikin = Time.parse(sheet[row, 4]) # 退勤時刻
+    start = Time.parse('10:00') # 営業開始時刻
+    finish = Time.parse('19:00') #営業終了時刻
     day = Date.parse(sheet[row, 1]) # 各行の日付
     sheet[row, 11] = if sheet[row, 3].present? && sheet[row, 4].present? # 出勤退勤入力がされていたら
                       if day.sunday? || day.national_holiday? # 日曜／祝日なら
-                        if syukkin <= start && taikin >= finish#10時前出勤かつ19時後退勤なら1日手当て
+                        if syukkin <= start && taikin >= finish # 営業開始より早く出勤、終了より後に退勤なら1日手当て
                           800
                         else # 途中出退勤の場合、営業時間(10::00~19:00)のうち1hにつき*100
-                          if syukkin <= start # 営業時間前出勤
-                            (taikin - start) / 3600 * 100
-                          elsif taikin >= finish # 営業時間後退勤
+                          if syukkin <= start # 営業開始時刻より前の出勤
+                            (taikin - start) / 3600 * 100 # 秒単位で結果が出るので、時給換算
+                          elsif taikin >= finish # 営業終了時刻より後の退勤
                             (finish - syukkin) / 3600 * 100
                           else # 出退勤が営業時間内
                             (taikin - syukkin) / 3600 * 100
                           end
                         end
                       elsif day.saturday? # 土曜
-                        if syukkin <= start && taikin >= finish
+                        if syukkin <= start && taikin >= finish # 1日手当ての条件
                           400
                         else # 途中出退勤の場合、営業時間(10::00~19:00)のうち1hにつき*50
                           if syukkin <= start
