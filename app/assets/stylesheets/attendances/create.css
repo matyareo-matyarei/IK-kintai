@@ -71,20 +71,14 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-.chatwork-btn-icon {
-  box-shadow: 1px 3px 6px 3px #888888;
-  border: orangered;
+.line-btn-icon {
+  box-shadow: 2px 3px 2px 1px #4545;
   transition: .3s;
+}
+.line-btn-icon:hover {
+  box-shadow: none;
+  opacity: 0.6;
+  background-color: cornsilk;
 }
 
 .btn {

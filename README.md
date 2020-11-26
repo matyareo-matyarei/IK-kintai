@@ -42,8 +42,8 @@ https://ik-kintai.herokuapp.com/
 ![フォーム送信resize](https://user-images.githubusercontent.com/71745650/99881955-520d0680-2c60-11eb-9137-8fa30bdcdf7e.gif)
 
 
-### 勤怠入力履歴  
- 打刻漏れを防ぐ為、フォームの送信履歴をユーザーは確認できる  
+### 勤怠入力履歴確認＋削除機能  
+ 打刻漏れを防ぐ為、フォームの送信履歴をユーザーは確認、削除できる  
  <img width="300" src="https://user-images.githubusercontent.com/71745650/99881620-2557ef80-2c5e-11eb-8f02-9c2568f76d4e.png">
 
 
@@ -64,7 +64,7 @@ https://ik-kintai.herokuapp.com/
 # 実装予定の機能
 ### レスポンシブWebデザイン対応
 ### フォーム送信後、プレビュー又は確認画面遷移ボタン
-### 月初にChatWorkで勤怠管理の自動送信
+### 勤怠入力完了をLINEで送信
 
 # データベース設計
 
