@@ -100,3 +100,6 @@ https://ik-kintai.herokuapp.com/
 
 
 # ローカルでの操作方法
+```
+% git clone https://github.com/matyareo-matyarei/IK-kintai.git
+```
