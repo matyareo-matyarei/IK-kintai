@@ -224,7 +224,7 @@
   width         : 20pt;        /* 大きさ：横 */
   height        : 40pt;        /* 大きさ：縦 */
   vertical-align: top;         /* 並び位置   */
-  visibility    : hidden;      /* チェックボックスを非表示 */
+  /* visibility    : hidden;      チェックボックスを非表示 */
 }
 
  /* --- チェックボックス直後のlabel --- */

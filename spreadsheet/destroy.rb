@@ -19,14 +19,15 @@ if $attendance.work_days.year == 2020 && $attendance.work_days.month == 11
 elsif $attendance.work_days.year == 2020 && $attendance.work_days.month == 12
   case $user.affiliation_id
   when 2 # 浅草
-    spreads = session.spreadsheet_by_key('')
+    spreads = session.spreadsheet_by_key('1CNB8327QstH7n0wX9xLUO3cFWbZvZpbzLobCzf-UP04')
   when 3 # 千束
-    spreads = session.spreadsheet_by_key('')
+    spreads = session.spreadsheet_by_key('1cMErIo_mOrupNc7-CsWuXx60M5xyaa2Yu11HgYvxgps')
   when 4 # 日暮里
-    spreads = session.spreadsheet_by_key('')
+    spreads = session.spreadsheet_by_key('1OA2ZT6X29aafkF5cEhdPa5r76PS0slNYgd1qAI4A218')
   when 5 # 本部
-    spreads = session.spreadsheet_by_key('')
+    spreads = session.spreadsheet_by_key('1ZBWtL9tOGrm1MEmAuuxiWpGi_JAzQJw640MFEpa4lvU')
   end
+
 else
 end
 

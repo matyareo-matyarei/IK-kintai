@@ -4,7 +4,7 @@ require 'active_support/all'
 session = GoogleDrive::Session.from_config('config.json')
 
 # //セット//
-# 書き込む勤怠シートを指定
+# 書き込む勤怠シートを指定(11月)
 case $user.affiliation_id
 when 2 # 浅草
   spreads = session.spreadsheet_by_key('1c7my0A20BFbcG9hC62MQr1TkwEYj2wjLPeSa7BUio2Q')

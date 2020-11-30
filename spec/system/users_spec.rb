@@ -11,13 +11,10 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       # トップページへいこうとすると、ログイン画面に遷移する
       visit root_path
       expect(current_path).to eq '/users/sign_in'
-
       # 新規登録ページへ遷移するボタンがある
       expect(page).to have_content('新規登録へ')
-
       # 新規登録ボタンを押して、新規登録ページへ移動する
       click_on '新規登録へ'
-
       # ユーザー情報を入力する
       fill_in 'full_name', with: @user.full_name
       fill_in 'email', with: @user.email
@@ -25,16 +22,12 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       fill_in 'password-confirmation', with: @user.password_confirmation
       choose '常勤'
       select '千束', from: 'user_affiliation_id'
-
       # 社員登録ボタンを押すとユーザーモデルのカウントが1上がる
       expect { click_on '社員登録' }.to change { User.count }.by(1)
-
       # 勤怠入力(attendance#new)画面へ遷移する
       expect(current_path).to eq root_path
-
       # ログアウトボタンが表示されている
       expect(page).to have_content('ログアウト')
-
       # ログインボタンや新規登録ボタンが表示されていない
       expect(page).to have_no_content('新規登録')
       expect(page).to have_no_content('ログイン')
@@ -44,11 +37,25 @@ RSpec.describe 'ユーザー新規登録', type: :system do
   context '新規登録できない時' do
     it '誤った情報では新規登録ができず、新規登録ページへ戻ってくる' do
       # トップページへいこうとすると、ログイン画面に遷移する
+      visit root_path
+      expect(current_path).to eq '/users/sign_in'
       # 新規登録ページへ遷移するボタンがある
+      expect(page).to have_content('新規登録へ')
       # 新規登録ページへ移動する
+      click_on '新規登録へ'
       # ユーザー情報を入力する
+      fill_in 'full_name', with: ""
+      fill_in 'email', with: ""
+      fill_in 'password', with: ""
+      fill_in 'password-confirmation', with: ""
+      choose '常勤'
+      select '千束', from: 'user_affiliation_id'
       # 社員登録ボタンを押してもユーザーモデルのカウントは1上がらない
+      expect { click_on '社員登録' }.to change { User.count }.by(0)
       # 新規登録ページへ戻される
+      expect(current_path).to eq "/users/sign_up"
     end
   end
+
+  
 end
