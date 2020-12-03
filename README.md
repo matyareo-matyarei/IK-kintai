@@ -68,6 +68,7 @@ https://ik-kintai.herokuapp.com/
 ### 月をまたいだ時の入力の分岐
 
 # データベース設計
+<img width="566" alt="ik-kintai ER図" src="https://user-images.githubusercontent.com/71745650/100961056-ef234580-3564-11eb-8b42-b433b96f72bf.png">
 
 ## users テーブル
 
