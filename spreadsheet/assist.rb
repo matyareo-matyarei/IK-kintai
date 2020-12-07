@@ -4,30 +4,30 @@ require 'active_support/all'
 session = GoogleDrive::Session.from_config('config.json')
 
 # //セット//
-# 書き込む勤怠シートを指定(11月)
+# 書き込む勤怠シートを指定(12月)
 case $user.affiliation_id
 when 2 # 浅草
-  spreads = session.spreadsheet_by_key('1c7my0A20BFbcG9hC62MQr1TkwEYj2wjLPeSa7BUio2Q')
+  spreads = session.spreadsheet_by_key('1CNB8327QstH7n0wX9xLUO3cFWbZvZpbzLobCzf-UP04')
 when 3 # 千束
-  spreads = session.spreadsheet_by_key('1DgfB3Ayrk0QA7VUqeTO3P0aoL1pwgZKCPsnWmtHjLH8')
+  spreads = session.spreadsheet_by_key('1cMErIo_mOrupNc7-CsWuXx60M5xyaa2Yu11HgYvxgps')
 when 4 # 日暮里
-  spreads = session.spreadsheet_by_key('1_cLUUjCG-M16FvS9I_s9m7L6khCr4IjWNWmRc75zFZg')
+  spreads = session.spreadsheet_by_key('1OA2ZT6X29aafkF5cEhdPa5r76PS0slNYgd1qAI4A218')
 when 5 # 本部
-  spreads = session.spreadsheet_by_key('1gKlozDb0P8VSYQw2wsR11JPgCtgVvvr-sbHvl45ShhI')
+  spreads = session.spreadsheet_by_key('1ZBWtL9tOGrm1MEmAuuxiWpGi_JAzQJw640MFEpa4lvU')
 end
 
-# [1DgfB3Ayrk0QA7VUqeTO3P0aoL1pwgZKCPsnWmtHjLH8]千束11月の勤怠
-# [1c7my0A20BFbcG9hC62MQr1TkwEYj2wjLPeSa7BUio2Q]浅草11月の勤怠
-# [1_cLUUjCG-M16FvS9I_s9m7L6khCr4IjWNWmRc75zFZg]日暮里11月の勤怠
-# [1gKlozDb0P8VSYQw2wsR11JPgCtgVvvr-sbHvl45ShhI]本部11月の勤怠
+# [1cMErIo_mOrupNc7-CsWuXx60M5xyaa2Yu11HgYvxgps]千束12月の勤怠
+# [1CNB8327QstH7n0wX9xLUO3cFWbZvZpbzLobCzf-UP04]浅草12月の勤怠
+# [1OA2ZT6X29aafkF5cEhdPa5r76PS0slNYgd1qAI4A218]日暮里12月の勤怠
+# [1ZBWtL9tOGrm1MEmAuuxiWpGi_JAzQJw640MFEpa4lvU]本部12月の勤怠
 # [17uvb27n9d-pobk0kVQy-YwJbXhxpEaOt2RBP0vB2j4M]テスト用勤怠コピー
 
-# 浅草11月日報
-asakusa = '1jjNHb3LP8QhaoiqdS-MHtP8KAfvGbMiKhs7bKTnagdo'
-# 千束11月日報
-senzoku = '1DXCwkxgS0OOPGvU8FtSSBH1EJ9nfLTjod3QJ_mmbYfw'
-# 日暮里11月日報
-nippori = '1xVl_kN5ca5ptSkHzTCFD4m1ffKAwVJ2u0EL3hv_Vs4M'
+# 浅草12月日報
+asakusa = '19Xec851eAYdr0VkaZzYqPqQAUpHAOcCMwgr5wbK0nZg'
+# 千束12月日報
+senzoku = '154-wSgrThTWV_510PP1LDC68fswScbh1tYjzpiqxYJA'
+# 日暮里12月日報
+nippori = '1hVOS64VfUqdn7DRFHdtPPPKvbOMhMHA4h561vfAz-tg'
 
 # //セット//
 
