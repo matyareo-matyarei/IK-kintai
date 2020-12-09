@@ -64,7 +64,7 @@ https://ik-kintai.herokuapp.com/
 ## バックエンド
 Ruby,Ruby on Rails
 ## フロントエンド
-JavaScript
+Html,CSS,JavaScript
 ## データベース
 MySQL SequelPro
 ## インフラ
