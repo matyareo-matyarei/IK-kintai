@@ -60,12 +60,27 @@ https://ik-kintai.herokuapp.com/
 - 施術時間（非常勤で3院分の日報に入力されている施術時間を入力）  
 ![補助入力resize](https://user-images.githubusercontent.com/71745650/99892014-91187780-2cb3-11eb-8c49-4ea6e1bddae5.gif)
 
+# 使用技術(開発環境)
+## バックエンド
+Ruby,Ruby on Rails
+## フロントエンド
+JavaScript
+## データベース
+MySQL SequelPro
+## インフラ
+Heroku
+## ソース管理
+GitHub,GitHubDesktop
+## テスト
+Rspec
+## エディタ
+VSCode
 
-# 実装予定の機能
-### レスポンシブWebデザイン対応
+# 課題や今後実装したい機能
 ### フォーム送信後、プレビュー又は確認画面遷移ボタン
 ### 勤怠入力完了をLINEで送信
-### 月をまたいだ時の入力の分岐
+### 月をまたいだ時の入力の分岐の管理、または自動化
+### Dockerで環境構築
 
 # データベース設計
 <img width="566" alt="ik-kintai ER図" src="https://user-images.githubusercontent.com/71745650/100961056-ef234580-3564-11eb-8b42-b433b96f72bf.png">
