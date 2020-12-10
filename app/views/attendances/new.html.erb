@@ -11,7 +11,17 @@
 
     <div class='current-time-btn'>
       <span class='current-time-btn-text'>現時刻入力</span>
-      <button type="button"></button>
+      <%= audio_tag("paka!!.mp3",id:"audio") %>  <%#音を鳴らす%>
+      <button type="button" class="audioButton"></button>
+      <%= javascript_tag do %>
+        document.querySelector('.audioButton').onclick = function() {
+        if( typeof( document.querySelector('#audio').currentTime ) !='undefined' )
+        {
+          document.querySelector('#audio').currentTime = 0;
+        }
+        document.querySelector("#audio").play();
+        }
+      <% end %>
       <%= image_tag '時計.png' , size: '60x60', class: "current-time-btn-icon"  %>
     </div>
 
