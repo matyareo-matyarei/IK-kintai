@@ -32,10 +32,14 @@
     </div>
     <div class="form">
       <div class='radioArea'>
-        <%= f.radio_button :in_out, :true, {style: "display: inline-block;"} %>
-        <%= f.label :in_out_true, "出勤" %>
-        <%= f.radio_button :in_out, :false, {style: "display: inline-block;"} %>
-        <%= f.label :in_out_false, "退勤" %>
+        <div class='radioArea-left'>
+          <%= f.radio_button :in_out, :true, {style: "display: inline-block;"} %>
+          <%= f.label :in_out_true, "出勤" %>
+        </div>
+        <div class='radioArea-right'>
+          <%= f.radio_button :in_out, :false, {style: "display: inline-block;"} %>
+          <%= f.label :in_out_false, "退勤" %>
+        </div>
       </div>
     </div>
 

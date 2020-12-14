@@ -97,7 +97,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 2.9rem;
+  max-width: 687px;
 }
 
 .carfare-content {
@@ -220,22 +221,29 @@
   font-size: 13px;
 }
 
+.radioArea {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .radioArea input[type="radio"] {
   width         : 20pt;        /* 大きさ：横 */
   height        : 40pt;        /* 大きさ：縦 */
-  vertical-align: top;         /* 並び位置   */
+  vertical-align: sub;         /* 並び位置 */ 
+  margin-left: 0.8rem;
   /* visibility    : hidden;      チェックボックスを非表示 */
 }
 
  /* --- チェックボックス直後のlabel --- */
 .radioArea input[type="radio"] + label {
-  padding       : 20px 32px;                  /* labelの余白 */
-  font-size     : xx-large;                       /* labelの文字サイズ */
-  font-weight   : bold;                       /* 文字太さ   */
+  padding       : 1.5rem 1.6rem;                  /* labelの余白 */
+  font-size     : 3rem;                         /* labelの文字サイズ */
+  font-weight   : bold;                         /* 文字太さ   */
   border        : 2px solid rgba(0, 0, 0, 0); /* labelの枠線 */
-  border-radius : 5px;                        /* labelの角丸 */
-  cursor        : pointer;                    /* カーソル設定 */
-  transition    : .2s;                        /* なめらか変化 */
+  border-radius : 5px;                          /* labelの角丸 */
+  cursor        : pointer;                      /* カーソル設定 */
+  transition    : .2s;                          /* なめらか変化 */
 }
  /* --- 選択されたチェックボックス直後のlabel --- */
 .radioArea input[type="radio"]:checked + label {
