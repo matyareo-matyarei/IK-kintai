@@ -27,10 +27,14 @@
     </div>
     <div class="form">
       <div class='radioArea'>
-        <%= f.radio_button :full_part, :true, {style: "display: inline-block;"} %>
-        <%= f.label :full_part_true, "常勤" %>
-        <%= f.radio_button :full_part, :false, {style: "display: inline-block;"} %>
-        <%= f.label :full_part_false, "非常勤" %>      
+        <div class='radioArea-left'>
+          <%= f.radio_button :full_part, :true, {style: "display: inline-block;"} %>
+          <%= f.label :full_part_true, "常勤" %>
+        </div>
+        <div class='radioArea-right'>
+          <%= f.radio_button :full_part, :false, {style: "display: inline-block;"} %>
+          <%= f.label :full_part_false, "非常勤" %>      
+        </div>
       </div>
     </div>
   </div>
@@ -54,7 +58,6 @@
 <% end %>
 
   <div class="account-group">
-    <%# <h3>アカウントを取り消す</h3> %>
     <div>
       <%= button_to "アカウントの取消", registration_path(resource_name), data: { confirm: "登録したアカウントを取り消しますか？" }, method: :delete %>
     </div>
