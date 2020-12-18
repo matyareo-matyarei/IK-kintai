@@ -3,6 +3,11 @@
   margin: 0 auto;
   margin-top: 50px;
 }
+.login-btn :hover{
+  box-shadow: none;
+  transition: .1s;
+  opacity: 0.8;
+}
 
 .login-blue-btn {
   width: 100%;
@@ -13,12 +18,8 @@
   font-size: xx-large;
   border-radius: 1em;
   cursor: pointer;
-  box-shadow: 6px 6px 3px #778878;
+  box-shadow: 1px 6px 3px #778878;
 }
-.login-blue-btn :hover{
-  box-shadow: none;
-}
-
 
 .login-flash-message {
   text-align: center;

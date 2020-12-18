@@ -85,6 +85,12 @@
 
 .sign-up {
   text-decoration: none;
-  color: #0099e8;
+  color: #0084c6;
   font-size: xx-large;
+}
+
+.sign-up:hover{
+  color:#0099e8;
+  opacity: 0.8;
+  transition: .2s;
 }

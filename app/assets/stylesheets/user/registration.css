@@ -122,6 +122,11 @@
   width: 50%;
   margin: 0 auto;
 }
+.register-btn :hover{
+  box-shadow:none;
+  transition: .1s;
+  opacity: 0.8;
+}
 
 .register-blue-btn {
   width: 100%;
