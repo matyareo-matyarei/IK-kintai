@@ -67,3 +67,4 @@ gem 'pry-rails'
 gem 'rails-i18n'
 gem 'whenever', require: false
 gem 'holiday_japan', '~> 1.0', '>= 1.0.3'
+gem 'line_notify'
