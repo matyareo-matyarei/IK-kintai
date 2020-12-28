@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :attendances, only: [:new, :create, :destroy] do
     collection do
       get 'assist'
+      get 'line'
     end
   end
   post "/" => "attendances#create"

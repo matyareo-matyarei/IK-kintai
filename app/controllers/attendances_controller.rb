@@ -20,6 +20,11 @@ class AttendancesController < ApplicationController
   def assist
     load 'spreadsheet/assist.rb'
   end
+
+  def line
+    load 'spreadsheet/line.rb'
+    redirect_to root_path
+  end
   
   def destroy
     @attendance = Attendance.find(params[:id])
