@@ -1,26 +1,5 @@
-require 'google_drive'
-require 'active_support/all'
-
-session = GoogleDrive::Session.from_config('config.json')
-
-# //セット//
-# 書き込む勤怠シートを指定(12月)
-case $user.affiliation_id
-when 2 # 浅草
-  spreads = session.spreadsheet_by_key('1CNB8327QstH7n0wX9xLUO3cFWbZvZpbzLobCzf-UP04')
-when 3 # 千束
-  spreads = session.spreadsheet_by_key('1cMErIo_mOrupNc7-CsWuXx60M5xyaa2Yu11HgYvxgps')
-when 4 # 日暮里
-  spreads = session.spreadsheet_by_key('1OA2ZT6X29aafkF5cEhdPa5r76PS0slNYgd1qAI4A218')
-when 5 # 本部
-  spreads = session.spreadsheet_by_key('1ZBWtL9tOGrm1MEmAuuxiWpGi_JAzQJw640MFEpa4lvU')
-end
-
-# [1cMErIo_mOrupNc7-CsWuXx60M5xyaa2Yu11HgYvxgps]千束12月の勤怠
-# [1CNB8327QstH7n0wX9xLUO3cFWbZvZpbzLobCzf-UP04]浅草12月の勤怠
-# [1OA2ZT6X29aafkF5cEhdPa5r76PS0slNYgd1qAI4A218]日暮里12月の勤怠
-# [1ZBWtL9tOGrm1MEmAuuxiWpGi_JAzQJw640MFEpa4lvU]本部12月の勤怠
-# [17uvb27n9d-pobk0kVQy-YwJbXhxpEaOt2RBP0vB2j4M]テスト用勤怠コピー
+require "./spreadsheet/set"
+spreadsheetset
 
 # 浅草12月日報
 asakusa = '19Xec851eAYdr0VkaZzYqPqQAUpHAOcCMwgr5wbK0nZg'
@@ -29,11 +8,6 @@ senzoku = '154-wSgrThTWV_510PP1LDC68fswScbh1tYjzpiqxYJA'
 # 日暮里12月日報
 nippori = '1hVOS64VfUqdn7DRFHdtPPPKvbOMhMHA4h561vfAz-tg'
 
-# //セット//
-
-# Userのfull_nameと一致するワークシートを取得
-sheet_tittle = $user.full_name
-sheet = spreads.worksheet_by_title(sheet_tittle)
 
 # 休憩時間入力
 i = 6
@@ -41,12 +15,12 @@ eight = Time.parse('8:00') # 8時間の値eight
 while i <= 36
   begin
     kousoku = if $user.full_part # 常勤の場合 拘束時間の値=kousoku
-                Time.parse(sheet[i, 11])
+                Time.parse(@sheet[i, 11])
               else # 非常勤の場合
-                Time.parse(sheet[i, 12])
+                Time.parse(@sheet[i, 12])
               end
     # 出/退勤のセルに値が入っていて、拘束時間が8h以上なら休憩時間1:00を入れる
-    sheet[i, 5] = if sheet[i, 3].present? && sheet[i, 4].present? && kousoku.hour >= eight.hour
+    @sheet[i, 5] = if @sheet[i, 3].present? && @sheet[i, 4].present? && kousoku.hour >= eight.hour
                     '1:00'
                   else
                     ''
@@ -59,13 +33,13 @@ end
 # 手当て入力
 # User登録が非常勤(full_partがfalse)の人は出勤日の内、土と日・祝日に手当てが入る
 unless $user.full_part
-  (6..sheet.num_rows).each do |row| # セルの行で値が入っているところまで
-    syukkin = Time.parse(sheet[row, 3]) # 出勤時刻
-    taikin = Time.parse(sheet[row, 4]) # 退勤時刻
+  (6..@sheet.num_rows).each do |row| # セルの行で値が入っているところまで
+    syukkin = Time.parse(@sheet[row, 3]) # 出勤時刻
+    taikin = Time.parse(@sheet[row, 4]) # 退勤時刻
     start = Time.parse('10:00') # 営業開始時刻
     finish = Time.parse('19:00') #営業終了時刻
-    day = Date.parse(sheet[row, 1]) # 各行の日付
-    sheet[row, 11] = if sheet[row, 3].present? && sheet[row, 4].present? # 出勤退勤入力がされていたら
+    day = Date.parse(@sheet[row, 1]) # 各行の日付
+    @sheet[row, 11] = if @sheet[row, 3].present? && @sheet[row, 4].present? # 出勤退勤入力がされていたら
                       if day.sunday? || day.national_holiday? # 日曜／祝日なら
                         if syukkin <= start && taikin >= finish # 営業開始より早く出勤、終了より後に退勤なら1日手当て
                           800
@@ -96,7 +70,7 @@ unless $user.full_part
                     end
   rescue StandardError => e
     puts e.message
-    sheet[row, 11] = '' # 出退勤入ってない
+    @sheet[row, 11] = '' # 出退勤入ってない
   end
 end
 
@@ -108,13 +82,13 @@ unless $user.full_part
   treatment_nippo = {}
   nippou.each do |nippou|
     # 各院の日報スプレッドシートを指定
-    spread = session.spreadsheet_by_key(nippou)
+    spread = GoogleDrive::Session.from_config('config.json').spreadsheet_by_key(nippou)
     kadou = spread.worksheet_by_title('稼働率')
 
     # 日報（稼働率シート）の名前から取得するlineを指定
     num = 6
     while num <= 42
-      if kadou[num, 1].slice(0, 2) == sheet_tittle.slice(0, 2) # 施術者とユーザーがマッチ
+      if kadou[num, 1].slice(0, 2) == $user.full_name.slice(0, 2) # 施術者とユーザーがマッチ
         # 入力したユーザー名(頭２つ)とマッチする日報の施術時間のライン＝namematch_line を定義
         namematch_line = num + 1
       end
@@ -127,8 +101,8 @@ unless $user.full_part
       begin
         treatment_time = kadou[namematch_line, i] # namematch_lineと1〜31日まで
         if treatment_time.present? # 施術時間が入っていれば
-          sheet[i + 3, 7] = "0:0#{(treatment_time.to_f * 10).to_i}" # 勤怠の施術時間に反映
-          treatment_time_slice = sheet[i + 3, 7].slice(-3, 3)
+          @sheet[i + 3, 7] = "0:0#{(treatment_time.to_f * 10).to_i}" # 勤怠の施術時間に反映
+          treatment_time_slice = @sheet[i + 3, 7].slice(-3, 3)
           case nippou
           when asakusa
             treatment_asa[:"#{i}"] = treatment_time_slice
@@ -153,9 +127,9 @@ unless $user.full_part
       doujitu_treatment_sum = treatment_asa[:"#{key}"].to_i + treatment_sen[:"#{key}"].to_i + treatment_nippo[:"#{key}"].to_i
       puts doujitu_treatment_sum
       # シンボルi(key)を一度文字列に変換、数字変換しその値(key)を元にスプレッドシートに反映
-      sheet[key.to_s.to_i + 3, 7] = "0:0#{doujitu_treatment_sum}"
+      @sheet[key.to_s.to_i + 3, 7] = "0:0#{doujitu_treatment_sum}"
     end
   end
 end
 
-sheet.save
+@sheet.save
