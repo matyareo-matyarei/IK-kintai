@@ -1,12 +1,12 @@
 require "./spreadsheet/set"
 spreadsheetset
 
-# 浅草12月日報
-asakusa = '19Xec851eAYdr0VkaZzYqPqQAUpHAOcCMwgr5wbK0nZg'
-# 千束12月日報
-senzoku = '154-wSgrThTWV_510PP1LDC68fswScbh1tYjzpiqxYJA'
-# 日暮里12月日報
-nippori = '1hVOS64VfUqdn7DRFHdtPPPKvbOMhMHA4h561vfAz-tg'
+# 浅草1月日報
+asakusa = '10dM37wL06qck777H_Ff19HbShfQbphywdPGY4FXu8bY'
+# 千束1月日報
+senzoku = '1BXsu-sC-IdlE607OmBbXXG3dHUxILGff9X9bKsb5wtk'
+# 日暮里1月日報
+nippori = '1av4yUTjvoAuo8pAtMdaET75-J5OsAwLCGo7H9bCi6vA'
 
 
 # 休憩時間入力

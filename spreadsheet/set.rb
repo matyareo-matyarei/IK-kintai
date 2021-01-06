@@ -31,6 +31,19 @@ def spreadsheetset
     when 5 # 本部
       key = '1ZBWtL9tOGrm1MEmAuuxiWpGi_JAzQJw640MFEpa4lvU'
     end
+
+  elsif $attendance.work_days.year == 2021 && $attendance.work_days.month == 1
+    case $user.affiliation_id
+    when 2 # 浅草
+      key = '1KbHBYIM_TPT38HaycXo940MvcNPAOhnNjOEgNvFC2-Q'
+    when 3 # 千束
+      key = '1yNWXcbcm0-5Jk7RiUcdA7Digsf_yE7tcI3YFtT6Ghmg'
+    when 4 # 日暮里
+      key = '1RDm8ydUOAxlPfj1r1OgDiHMnC4lepI6ynR-cjpYMdxA'
+    when 5 # 本部
+      key = '143RsZXyqmeYs2b_IrNUVhQz0lMG1v63GpEkGDbt_DJI'
+    end
+
   else
   end
 
