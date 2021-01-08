@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <meta charset="utf-8">
-    <title>IK-勤怠管理</title>
+<html lang="ja">
+<head>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <meta charset="utf-8">
+  <title>IK-勤怠管理</title>
+  <meta name="description" content="IKの勤怠管理アプリです。">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%# <%= favicon_link_tag %>
+</head>
 
-  <body>
-    <%= yield %>
-    <%# <script src="now.js"></script> %>
-  </body>
+<body>
+  <%= yield %>
+  <%# <script src="now.js"></script> %>
+</body>
 </html>
