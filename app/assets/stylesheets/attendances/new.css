@@ -251,6 +251,6 @@
 }
  /* --- 選択されていないチェックボックス直後のlabelにマウスが乗った --- */
 .radioArea input[type="radio"]:not(:checked) + label:hover {
-  background    : rgba(30, 101, 255, 0.2);     /* lebelの背景 */
+  background    : rgba(30, 101, 255, 0.2);     /* labelの背景 */
 }
 

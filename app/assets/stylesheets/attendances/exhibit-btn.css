@@ -33,12 +33,15 @@
   opacity: 0;
   transition: .3s;
   cursor: pointer;
+  border-style: none;
 }
 
 .current-time-btn button:hover {
   opacity: 0.2;
   background-color: white;
-  border: white;
   transition: .3s;
 }
 
+.current-time-btn button:focus {
+  outline-style: none;
+}
