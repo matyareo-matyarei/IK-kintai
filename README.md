@@ -60,6 +60,9 @@ https://ik-kintai.herokuapp.com/
 - 施術時間（非常勤で3院分の日報に入力されている施術時間を入力）  
 ![補助入力resize](https://user-images.githubusercontent.com/71745650/99892014-91187780-2cb3-11eb-8c49-4ea6e1bddae5.gif)
 
+### 月末入力完了後、１クリックで「入力完了」の旨をLINEに送信
+　補助入力後、画面に出るLINEアイコンを押すと自身の所属するLINEグループに報告もされる
+
 # 使用技術(開発環境)
 ## バックエンド
 Ruby,Ruby on Rails
