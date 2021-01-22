@@ -1,6 +1,9 @@
 require "./spreadsheet/set"
-spreadsheetset
-
+unless $attendance.present?
+  thisMonth
+else
+  spreadsheetset
+end
 # 浅草1月日報
 asakusa = '10dM37wL06qck777H_Ff19HbShfQbphywdPGY4FXu8bY'
 # 千束1月日報
