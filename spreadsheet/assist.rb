@@ -119,7 +119,7 @@ unless $user.full_part
     end
   end
   # 同日に施術時間が入っていたら合計値を入れる処理
-  puts treatment_asa, treatment_sen, treatment_nippo
+  # puts treatment_asa, treatment_sen, treatment_nippo
   # 同日に施術時間が入っているシンボルiを定義(Arrayクラス)
   i = treatment_asa.keys & treatment_sen.keys | treatment_asa.keys & treatment_nippo.keys | treatment_sen.keys & treatment_nippo.keys
   if i.present? # 同日施術時間の入力があれば
