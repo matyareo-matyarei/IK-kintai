@@ -4,12 +4,13 @@ unless $attendance.present?
 else
   spreadsheetset
 end
-# 浅草1月日報
-asakusa = '10dM37wL06qck777H_Ff19HbShfQbphywdPGY4FXu8bY'
-# 千束1月日報
-senzoku = '1BXsu-sC-IdlE607OmBbXXG3dHUxILGff9X9bKsb5wtk'
-# 日暮里1月日報
-nippori = '1av4yUTjvoAuo8pAtMdaET75-J5OsAwLCGo7H9bCi6vA'
+# 参照する日報（勤怠提出後、新しい月に書き換えること）
+# 浅草2月日報
+asakusa = '1laMSQQPqcrDmj0zmQiFgycsLRC5CB-DsfNS747Kmthk'
+# 千束2月日報
+senzoku = '1eF6eC2Dz9YI_DFfK_nEsEbzLiQDgqI9NjnoFgvwZOIY'
+# 日暮里2月日報
+nippori = '1Gvw7R8GWo9IvWmDJkkUdfrDxjfEGWb3aD3aNp2lebb4'
 
 
 # 休憩時間入力
