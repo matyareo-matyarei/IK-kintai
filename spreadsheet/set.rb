@@ -21,13 +21,13 @@ def spreadsheetset
 elsif $attendance.work_days.year == 2021 && $attendance.work_days.month == 2
     case $user.affiliation_id
     when 2 # 浅草
-      key = ''
+      key = '1jltuIubX_J-C6yogaSco39YlEheGHdyf5BMWdm2VxhI'
     when 3 # 千束
-      key = ''
+      key = '1uvihPlaCcfePnR0vUS01EiUE5-7fOPA5NCiOJXAJfpw'
     when 4 # 日暮里
-      key = ''
+      key = '1gZKykJpy1i4-OcswdpEA8aWRJiEAeS7fAUwXoaxaiDI'
     when 5 # 本部
-      key = ''
+      key = '11a2dWRK2xGZqfz_fF_1GDQRgKHxl8zYBob8iaytFlQs'
     end
   else
   end
