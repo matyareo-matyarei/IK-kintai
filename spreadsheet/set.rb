@@ -5,20 +5,8 @@ def spreadsheetset
   require 'holiday_japan'
   session = GoogleDrive::Session.from_config('config.json')
   # 書き込みたいスプレッドシートを指定
-  # 2021年1月の場合
-  if $attendance.work_days.year == 2021 && $attendance.work_days.month == 1
-    case $user.affiliation_id
-    when 2 # 浅草
-      key = '1KbHBYIM_TPT38HaycXo940MvcNPAOhnNjOEgNvFC2-Q'
-    when 3 # 千束
-      key = '1yNWXcbcm0-5Jk7RiUcdA7Digsf_yE7tcI3YFtT6Ghmg'
-    when 4 # 日暮里
-      key = '1RDm8ydUOAxlPfj1r1OgDiHMnC4lepI6ynR-cjpYMdxA'
-    when 5 # 本部
-      key = '143RsZXyqmeYs2b_IrNUVhQz0lMG1v63GpEkGDbt_DJI'
-    end      
   # 2021年2月の場合
-elsif $attendance.work_days.year == 2021 && $attendance.work_days.month == 2
+  if $attendance.work_days.year == 2021 && $attendance.work_days.month == 2
     case $user.affiliation_id
     when 2 # 浅草
       key = '1jltuIubX_J-C6yogaSco39YlEheGHdyf5BMWdm2VxhI'
@@ -28,6 +16,18 @@ elsif $attendance.work_days.year == 2021 && $attendance.work_days.month == 2
       key = '1gZKykJpy1i4-OcswdpEA8aWRJiEAeS7fAUwXoaxaiDI'
     when 5 # 本部
       key = '11a2dWRK2xGZqfz_fF_1GDQRgKHxl8zYBob8iaytFlQs'
+    end
+  # 2021年3月の場合
+elsif $attendance.work_days.year == 2021 && $attendance.work_days.month == 3
+    case $user.affiliation_id
+    when 2 # 浅草
+      key = ''
+    when 3 # 千束
+      key = ''
+    when 4 # 日暮里
+      key = ''
+    when 5 # 本部
+      key = ''
     end
   else
   end
@@ -42,15 +42,15 @@ def thisMonth
   require 'holiday_japan'
   session = GoogleDrive::Session.from_config('config.json')
   case $user.affiliation_id
-    # 2021年1月の場合
+    # 2021年2月設定
   when 2 # 浅草
-    key = '1KbHBYIM_TPT38HaycXo940MvcNPAOhnNjOEgNvFC2-Q'
+    key = '1jltuIubX_J-C6yogaSco39YlEheGHdyf5BMWdm2VxhI'
   when 3 # 千束
-    key = '1yNWXcbcm0-5Jk7RiUcdA7Digsf_yE7tcI3YFtT6Ghmg'
+    key = '1uvihPlaCcfePnR0vUS01EiUE5-7fOPA5NCiOJXAJfpw'
   when 4 # 日暮里
-    key = '1RDm8ydUOAxlPfj1r1OgDiHMnC4lepI6ynR-cjpYMdxA'
+    key = '1gZKykJpy1i4-OcswdpEA8aWRJiEAeS7fAUwXoaxaiDI'
   when 5 # 本部
-    key = '143RsZXyqmeYs2b_IrNUVhQz0lMG1v63GpEkGDbt_DJI'
+    key = '11a2dWRK2xGZqfz_fF_1GDQRgKHxl8zYBob8iaytFlQs'
   end      
   @sheet = session.spreadsheet_by_key(key).worksheet_by_title("#{$user.full_name}")
 end
