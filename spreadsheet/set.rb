@@ -32,6 +32,18 @@ elsif $attendance.work_days.year == 2021 && $attendance.work_days.month == 4
       key = '1t2P08n13clMPWgyrPAukFWw3UVZ2vfkcohCoNThFD7c'
     end
 
+  # 2021年5月の場合
+elsif $attendance.work_days.year == 2021 && $attendance.work_days.month == 5
+  case $user.affiliation_id
+  when 2 # 浅草
+    key = ''
+  when 3 # 千束
+    key = ''
+  when 4 # 日暮里
+    key = ''
+  when 5 # 本部
+    key = ''
+  end
 
   else
   end
