@@ -52,6 +52,7 @@ elsif $attendance.work_days.year == 2021 && $attendance.work_days.month == 6
 end
 
 # 出退勤入力なしに月末処理を行った場合の処理
+# 一度でも出退勤を記録していれば、$attendanceに入力した月のデータが入る
 def thisMonth
   require 'google_drive'
   require 'active_support/time'
