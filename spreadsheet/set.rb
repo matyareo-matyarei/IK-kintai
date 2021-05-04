@@ -8,6 +8,7 @@ def spreadsheetset
   # 毎月の値をセット（勤怠提出されたタイミングで  next→lastへ以降する）
   lastYear = 2021
   lastMonth = 4
+  # thisMonthにも↓は貼り付ける
   l_asakusa = '1c3cmqFMBkmL1XEH6Vrj7ICaFC-jQfQwvRn99e1bYcYs'
   l_senozku = '1oXC_FZMMSujDiVJswCEZaTsQyJERmD6gImGwjcj3nQw'
   l_nippori = '1ROu8pqYZ1XfXrPKoqm_USlnhhDkS9nJ0-KuLWqalW14'
@@ -21,7 +22,10 @@ def spreadsheetset
   n_honbu = '1tSdYwz8UDWFCIzaHGBuXsDLgbCZE_zTAlylURKs4t7Y'
 
   # 書き込みたいスプレッドシートを指定
-  MonthSet( lastYear, lastMonth, l_asakusa, l_senozku, l_nippori, l_honbu,  nextYear, nextMonth, n_asakusa, n_senzoku, n_nippori, n_honbu)
+  key = MonthSet( lastYear, lastMonth, l_asakusa, l_senozku, l_nippori, l_honbu,  nextYear, nextMonth, n_asakusa, n_senzoku, n_nippori, n_honbu)
+
+  # $user.full_nameと一致するワークシートを指定＝@sheet
+  @sheet = session.spreadsheet_by_key(key).worksheet_by_title("#{$user.full_name}")
 
 end
 
@@ -65,7 +69,7 @@ def MonthSet( lastYear, lastMonth, l_asakusa, l_senozku, l_nippori, l_honbu,  ne
     when 4 # 日暮里
       key = l_nippori
     when 5 # 本部
-      key = honbu
+      key = l_honbu
     end
 
   # 翌月のスプレッドシートSet
@@ -80,9 +84,7 @@ def MonthSet( lastYear, lastMonth, l_asakusa, l_senozku, l_nippori, l_honbu,  ne
     when 5 # 本部
       key = n_honbu
     end
-
   else
   end
-  # $user.full_nameと一致するワークシートを指定＝@sheet
-  @sheet = session.spreadsheet_by_key(key).worksheet_by_title("#{$user.full_name}")
+  return key
 end
