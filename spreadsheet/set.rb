@@ -16,10 +16,10 @@ def spreadsheetset
 
   nextYear = 2021
   nextMonth = 7
-  n_asakusa = ''
-  n_senzoku = ''
-  n_nippori = ''
-  n_honbu = ''
+  n_asakusa = '1PQw2HETumCmYk9j4dbALuinYBBUZpo0zY1HSIfY4N80'
+  n_senzoku = '1ZB4NvBDW-0tvBRTfjg3KVaQO-clEcVE9HwIjQ7EvWgg'
+  n_nippori = '1abCD9XtxuUISDqlOxFVfjkPYVVjaM6ZMzOmQNx6OUGw'
+  n_honbu = '1RSalL6avXmh3yrXWflv3emOZ1Ur0'
 
   # 書き込みたいスプレッドシートを指定
   key = MonthSet( lastYear, lastMonth, l_asakusa, l_senozku, l_nippori, l_honbu,  nextYear, nextMonth, n_asakusa, n_senzoku, n_nippori, n_honbu)
