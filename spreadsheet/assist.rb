@@ -6,11 +6,11 @@ else
 end
 # 参照する日報（勤怠提出後、新しい月に書き換えること）
 # 浅草7月日報
-asakusa = '1Ly84ig7TvDZdsq2f2_qJDO5z9uIkvVONcVWj-g57Pk0'
+asakusa = '1dAscy1fPyFXM-b2_fmdDcJ-3GwMQIkihHRd500wLJJc'
 # 千束7月日報
-senzoku = '1-zx29DQa1iMpuznfFUXsKnOWK-PbCO4mHp5OocsxiaM'
+senzoku = '1nx3VLE7kkiIMb3yk78lcmVUvIPEuaarcw3A_jQHh6CQ'
 # 日暮里7月日報
-nippori = '1VFDjvQBcsipOwSka7PyZl5qhAZiYxEIVTiDD-7ZGIBY'
+nippori = '1bf0qAEwgKx0znE99MJxheg06xSFKZU0HqDjugghOOCI'
 
 
 # 休憩時間入力
