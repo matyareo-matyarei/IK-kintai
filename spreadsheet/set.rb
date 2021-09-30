@@ -7,19 +7,19 @@ def spreadsheetset
 
   # 毎月の値をセット（勤怠提出されたタイミングで  next→lastへ以降する）
   lastYear = 2021
-  lastMonth = 8
+  lastMonth = 9
   # thisMonthにも↓は貼り付ける
-  l_asakusa = '1svcfy2Qnic_IYT-Hys0fAngyexagELJmGwHzKdWf4Sc'
-  l_senozku = '1gpm0XUj3__glbN-9DVvHn0pncEhWfzOhoctgJJQduqk'
-  l_nippori = '15-GmJo0LU9tumbS4ZlPsTACXDB5JKbc8nQZbYTt-Ye4'
-  l_honbu = '17vlgO8NkYx-ePxBW2Gs4yl244bdudFYmen7AOpyapXc'
+  l_asakusa = '1pAZqkKnK0iP96Uf2RxfH_3Hb6MKHa_QIWGdnW8iL-rk'
+  l_senozku = '1YGzLpz1QSDy2vlmHe3bT2QfESiCvvi2Eq6_sVvBBEfw'
+  l_nippori = '1P6dS5BsMet_wMQhAewDtNI6Kyp04BMGPfDs774S16ms'
+  l_honbu = '1enTR-gWIFltQWJyGF_XJ28lnI6MNjL4uV0yKT_e1vaI'
 
   nextYear = 2021
-  nextMonth = 9
-  n_asakusa = '1pAZqkKnK0iP96Uf2RxfH_3Hb6MKHa_QIWGdnW8iL-rk'
-  n_senzoku = '1YGzLpz1QSDy2vlmHe3bT2QfESiCvvi2Eq6_sVvBBEfw'
-  n_nippori = '1P6dS5BsMet_wMQhAewDtNI6Kyp04BMGPfDs774S16ms'
-  n_honbu = '1enTR-gWIFltQWJyGF_XJ28lnI6MNjL4uV0yKT_e1vaI'
+  nextMonth = 10
+  n_asakusa = '1WvQ-CCvvJr6crK_3kiiqAo37t5AFbmlBgyGGN4c3kNg'
+  n_senzoku = '13Yg6gi4y_7UF8dYCvkP5XqnBNInB4gbejgkY8Dytzkc'
+  n_nippori = '18WuAXzOVm-geCMsvFKoXrgvUOToOrbAcE2XTlILzjCk'
+  n_honbu = '1mftxCkFGVdvyKP7fgdtLfwkxO1OSja6Puz9hFzOZEFs'
 
   # 書き込みたいスプレッドシートを指定
   key = MonthSet( lastYear, lastMonth, l_asakusa, l_senozku, l_nippori, l_honbu,  nextYear, nextMonth, n_asakusa, n_senzoku, n_nippori, n_honbu)
@@ -38,10 +38,10 @@ def thisMonth
   session = GoogleDrive::Session.from_config('config.json')
 
   # 上の前月データ(l_asakusa~l_honbu)をコピーして↓に貼り付ける
-  l_asakusa = '1svcfy2Qnic_IYT-Hys0fAngyexagELJmGwHzKdWf4Sc'
-  l_senozku = '1gpm0XUj3__glbN-9DVvHn0pncEhWfzOhoctgJJQduqk'
-  l_nippori = '15-GmJo0LU9tumbS4ZlPsTACXDB5JKbc8nQZbYTt-Ye4'
-  l_honbu = '17vlgO8NkYx-ePxBW2Gs4yl244bdudFYmen7AOpyapXc'
+  l_asakusa = '1pAZqkKnK0iP96Uf2RxfH_3Hb6MKHa_QIWGdnW8iL-rk'
+  l_senozku = '1YGzLpz1QSDy2vlmHe3bT2QfESiCvvi2Eq6_sVvBBEfw'
+  l_nippori = '1P6dS5BsMet_wMQhAewDtNI6Kyp04BMGPfDs774S16ms'
+  l_honbu = '1enTR-gWIFltQWJyGF_XJ28lnI6MNjL4uV0yKT_e1vaI'
 
   case $user.affiliation_id
     # 前月のスプレッドシート設定
