@@ -5,12 +5,12 @@ else
   spreadsheetset
 end
 # 参照する日報（勤怠提出後、新しい月に書き換えること）
-# 浅草11月日報
-asakusa = '1TZ4uKEAGqYlRpd8LoTIpaCkPPS3cinZvsEAPAFHpGHM'
-# 千束11月日報
-senzoku = '1NFA4yceGSCt3bNhs61p9uxJAtOZxCKzVyFeqmdkHKZk'
-# 日暮里11月日報
-nippori = '15BOEXBAuja0ywSVd0-6RZZzrt1nnlfc40dF6DtIYWhQ'
+# 浅草12月日報
+asakusa = '1TfGg_qUjNr5WW8QEbFyZw9d66GzkuCk85-cPbeIdK-k'
+# 千束12月日報
+senzoku = '11GaNstr-nENxpC-eauMtkQhrrqPVFYyPKW9aAo1abgk'
+# 日暮里12月日報
+nippori = '1PTGTWsoo4puh7BO2KXUSGROcw03_Vf2GdM7LfL2XEuk'
 
 # 休憩時間入力
 i = 6
