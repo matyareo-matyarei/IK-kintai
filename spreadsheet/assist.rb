@@ -86,7 +86,7 @@ unless $user.full_part
   nippou.each do |nippou|
     # 各院の日報スプレッドシートを指定
     spread = GoogleDrive::Session.from_config('config.json').spreadsheet_by_key(nippou)
-    kadou = spread.worksheet_by_title('⑦稼働率')
+    kadou = spread.worksheet_by_title('⑧稼働率')
 
     # 日報（稼働率シート）の名前から取得するlineを指定
     num = 6
