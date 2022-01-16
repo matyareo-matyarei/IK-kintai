@@ -6,22 +6,22 @@ def spreadsheetset
   session = GoogleDrive::Session.from_config('config.json')
 
   # 毎月の値をセット（勤怠提出されたタイミングで  next→lastへ以降する）
-  lastYear = 2021
-  lastMonth = 12
+  lastYear = 2022
+  lastMonth = 1
   # thisMonthにも↓は貼り付ける
-  l_asakusa = '1tdsXWcAf6EmmtQAckeq1bfjg1FUnhyniHHzcgoI74zU'
-  l_senozku = '1JMzcpA6aX2Q9kbMHKxk_-PS0s5alROnuEH6I6d6S7kM'
-  l_nippori = '1pBXRhoZODA0dwEn0lYknETOsj-nLKQfpMREo4zDvmts'
-  l_honbu = '1LJVIuLpwm7WVKUGBNFo_wh4-KTlS2hISGnGCk8N6jA8'
+  l_asakusa = '1gzfGxILAwvqNfmfldH1Z_CGvKcRPhczwEK6p4UaHBc4'
+  l_senozku = '1c9h4qxRf6-61htUin-180cjGQOJS6RSSBnFML52mZmE'
+  l_nippori = '1bKmuxbh4ybGGiFkCq0Cqq0Gy4q91xMCMZEJb-vQhWOc'
+  l_honbu = '17ISGfbCS7LBpSqjJ9hmw-UQta-sjum5ITUw-E3akWxk'
 
   nextYear = 2022
-  nextMonth = 1
-  n_asakusa = '1gzfGxILAwvqNfmfldH1Z_CGvKcRPhczwEK6p4UaHBc4'
-  n_senzoku = '1c9h4qxRf6-61htUin-180cjGQOJS6RSSBnFML52mZmE'
-  n_nippori = '1bKmuxbh4ybGGiFkCq0Cqq0Gy4q91xMCMZEJb-vQhWOc'
-  n_honbu = '17ISGfbCS7LBpSqjJ9hmw-UQta-sjum5ITUw-E3akWxk'
+  nextMonth = 2
+  n_asakusa = ''
+  n_senzoku = ''
+  n_nippori = ''
+  n_honbu = ''
 
-  
+
   # 書き込みたいスプレッドシートを指定
   key = MonthSet( lastYear, lastMonth, l_asakusa, l_senozku, l_nippori, l_honbu,  nextYear, nextMonth, n_asakusa, n_senzoku, n_nippori, n_honbu)
 
@@ -39,10 +39,10 @@ def thisMonth
   session = GoogleDrive::Session.from_config('config.json')
 
   # 上の前月データ(l_asakusa~l_honbu)をコピーして↓に貼り付ける
-  l_asakusa = '1tdsXWcAf6EmmtQAckeq1bfjg1FUnhyniHHzcgoI74zU'
-  l_senozku = '1JMzcpA6aX2Q9kbMHKxk_-PS0s5alROnuEH6I6d6S7kM'
-  l_nippori = '1pBXRhoZODA0dwEn0lYknETOsj-nLKQfpMREo4zDvmts'
-  l_honbu = '1LJVIuLpwm7WVKUGBNFo_wh4-KTlS2hISGnGCk8N6jA8'
+  l_asakusa = '1gzfGxILAwvqNfmfldH1Z_CGvKcRPhczwEK6p4UaHBc4'
+  l_senozku = '1c9h4qxRf6-61htUin-180cjGQOJS6RSSBnFML52mZmE'
+  l_nippori = '1bKmuxbh4ybGGiFkCq0Cqq0Gy4q91xMCMZEJb-vQhWOc'
+  l_honbu = '17ISGfbCS7LBpSqjJ9hmw-UQta-sjum5ITUw-E3akWxk'
 
   case $user.affiliation_id
     # 前月のスプレッドシート設定
