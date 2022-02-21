@@ -7,15 +7,15 @@ def spreadsheetset
 
   # 毎月の値をセット（勤怠提出されたタイミングで  next→lastへ以降する）
   lastYear = 2022
-  lastMonth = 1
+  lastMonth = 2
   # thisMonthにも↓は貼り付ける
-  l_asakusa = '1gzfGxILAwvqNfmfldH1Z_CGvKcRPhczwEK6p4UaHBc4'
-  l_senozku = '1c9h4qxRf6-61htUin-180cjGQOJS6RSSBnFML52mZmE'
-  l_nippori = '1bKmuxbh4ybGGiFkCq0Cqq0Gy4q91xMCMZEJb-vQhWOc'
-  l_honbu = '17ISGfbCS7LBpSqjJ9hmw-UQta-sjum5ITUw-E3akWxk'
+  l_asakusa = ''
+  l_senozku = '1-bSmy9C1TWd61BVP6rc1wQxTtSogE4PTdOwc2XnCdC0'
+  l_nippori = ''
+  l_honbu = ''
 
   nextYear = 2022
-  nextMonth = 2
+  nextMonth = 3
   n_asakusa = ''
   n_senzoku = ''
   n_nippori = ''
@@ -39,10 +39,10 @@ def thisMonth
   session = GoogleDrive::Session.from_config('config.json')
 
   # 上の前月データ(l_asakusa~l_honbu)をコピーして↓に貼り付ける
-  l_asakusa = '1gzfGxILAwvqNfmfldH1Z_CGvKcRPhczwEK6p4UaHBc4'
-  l_senozku = '1c9h4qxRf6-61htUin-180cjGQOJS6RSSBnFML52mZmE'
-  l_nippori = '1bKmuxbh4ybGGiFkCq0Cqq0Gy4q91xMCMZEJb-vQhWOc'
-  l_honbu = '17ISGfbCS7LBpSqjJ9hmw-UQta-sjum5ITUw-E3akWxk'
+  l_asakusa = ''
+  l_senozku = '1-bSmy9C1TWd61BVP6rc1wQxTtSogE4PTdOwc2XnCdC0'
+  l_nippori = ''
+  l_honbu = ''
 
   case $user.affiliation_id
     # 前月のスプレッドシート設定
