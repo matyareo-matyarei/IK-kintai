@@ -7,15 +7,15 @@ def spreadsheetset
 
   # 毎月の値をセット（勤怠提出されたタイミングで  next→lastへ以降する）
   lastYear = 2022
-  lastMonth = 2
+  lastMonth = 3
   # thisMonthにも↓は貼り付ける
   l_asakusa = ''
-  l_senozku = '1-bSmy9C1TWd61BVP6rc1wQxTtSogE4PTdOwc2XnCdC0'
+  l_senozku = '1pQdMR960HPikyZWrflLVOtsxYcyzR1-iM6zICVgH2Ug'
   l_nippori = ''
   l_honbu = ''
 
   nextYear = 2022
-  nextMonth = 3
+  nextMonth = 4
   n_asakusa = ''
   n_senzoku = ''
   n_nippori = ''
@@ -40,7 +40,7 @@ def thisMonth
 
   # 上の前月データ(l_asakusa~l_honbu)をコピーして↓に貼り付ける
   l_asakusa = ''
-  l_senozku = '1-bSmy9C1TWd61BVP6rc1wQxTtSogE4PTdOwc2XnCdC0'
+  l_senozku = '1pQdMR960HPikyZWrflLVOtsxYcyzR1-iM6zICVgH2Ug'
   l_nippori = ''
   l_honbu = ''
 
